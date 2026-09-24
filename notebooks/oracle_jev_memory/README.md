@@ -34,6 +34,8 @@ The notebook then creates the `jev_*_memory` tables, the `set_jev_memory_ctx` pa
 
 Download the entire folder. The notebook's first code cell installs its pinned packages (`oracledb`, `typesafe-sdk`, `python-dotenv`) into the running kernel, so no separate install step is needed.
 
+The same cell raises `httpcore` to 1.0.9 or later. `typesafe-sdk` needs `h11` 0.16 or newer, and earlier `httpcore` releases reject that version. JupyterLab's own `httpx` often uses one of those releases, so without the upgrade pip reports a dependency conflict when the kernel runs in the same environment as JupyterLab.
+
 Add these keys to the `.env` at the repository root, the same file the other notebooks read:
 
 ```bash
@@ -47,11 +49,13 @@ JEV_MODEL=jev-1.13.0
 
 `load_dotenv()` walks up from the working directory to find that file, and environment variables take precedence over `.env` values. Keep credentials out of notebook cells and outputs.
 
-Start JupyterLab from this folder:
+Open the notebook from the repository root:
 
 ```bash
-python -m jupyterlab oracle_jev_memory.ipynb
+jupyter lab notebooks/oracle_jev_memory/oracle_jev_memory.ipynb
 ```
+
+Jupyter starts the kernel in the notebook's folder, so `load_dotenv()` finds the repository `.env` and the notebook can import `memory_examples.py`.
 
 Select any Python 3.11+ kernel and run the cells in order. The first code cell installs the packages. The next cells connect, load the embedding model if it's missing, create missing tables, apply VPD policies, and seed new fixture tenants. Restart the kernel before a full rerun. Fixture tenants from earlier runs stay in the database unless their cleanup cell ran.
 

@@ -1,0 +1,3223 @@
+{
+  "started_at": "2026-11-06T22:26:31.137417+00:00",
+  "python": "3.14.2",
+  "oracle": "23.26.3.0.0",
+  "program": "devrel-developerhub-postgresql-versus-oracle-ai-database-for-agent-memory",
+  "checks": {
+    "in_database_models": {
+      "passed": true,
+      "dimensions": 384,
+      "rerank_logit": -3.1473166942596436
+    },
+    "identical_seed_counts": {
+      "passed": true,
+      "documents": 100
+    },
+    "oracle_transaction_and_text_freshness": {
+      "passed": true,
+      "own_uncommitted": [
+        1,
+        1
+      ],
+      "other_uncommitted": [
+        0,
+        0
+      ],
+      "after_rollback": [
+        0,
+        0
+      ],
+      "after_commit": [
+        1,
+        1
+      ],
+      "graph_in_own_transaction": 1,
+      "graph_after_commit": 1,
+      "text_before_sync": 0,
+      "text_after_sync": 1
+    },
+    "postgres_transaction_and_bm25_freshness": {
+      "passed": true,
+      "own_uncommitted": [
+        1,
+        1
+      ],
+      "other_uncommitted": [
+        0,
+        0
+      ],
+      "after_rollback": [
+        0,
+        0
+      ],
+      "after_commit": [
+        1,
+        1
+      ],
+      "bm25_after_commit": 1
+    },
+    "sql_property_graph": {
+      "passed": true,
+      "edges": [
+        [
+          "m01",
+          "m02"
+        ]
+      ]
+    },
+    "complete_qrels": {
+      "passed": true,
+      "judged_pairs": 800,
+      "positive_pairs": 39
+    },
+    "ndcg_known_cases": {
+      "passed": true
+    },
+    "q1_database_reranker_mapping": {
+      "passed": true
+    },
+    "q1_oracle_vector_scope": {
+      "passed": true,
+      "returned": 8
+    },
+    "q1_oracle_lexical_scope": {
+      "passed": true,
+      "returned": 8
+    },
+    "q1_oracle_hybrid_scope": {
+      "passed": true,
+      "returned": 8
+    },
+    "q1_oracle_hybrid_rerank_scope": {
+      "passed": true,
+      "returned": 8
+    },
+    "q1_postgres_vector_scope": {
+      "passed": true,
+      "returned": 8
+    },
+    "q1_postgres_lexical_scope": {
+      "passed": true,
+      "returned": 8
+    },
+    "q1_postgres_hybrid_scope": {
+      "passed": true,
+      "returned": 8
+    },
+    "q1_postgres_hybrid_rerank_scope": {
+      "passed": true,
+      "returned": 8
+    },
+    "q1_identical_exact_vector_order": {
+      "passed": true
+    },
+    "q2_database_reranker_mapping": {
+      "passed": true
+    },
+    "q2_oracle_vector_scope": {
+      "passed": true,
+      "returned": 8
+    },
+    "q2_oracle_lexical_scope": {
+      "passed": true,
+      "returned": 7
+    },
+    "q2_oracle_hybrid_scope": {
+      "passed": true,
+      "returned": 8
+    },
+    "q2_oracle_hybrid_rerank_scope": {
+      "passed": true,
+      "returned": 8
+    },
+    "q2_postgres_vector_scope": {
+      "passed": true,
+      "returned": 8
+    },
+    "q2_postgres_lexical_scope": {
+      "passed": true,
+      "returned": 7
+    },
+    "q2_postgres_hybrid_scope": {
+      "passed": true,
+      "returned": 8
+    },
+    "q2_postgres_hybrid_rerank_scope": {
+      "passed": true,
+      "returned": 8
+    },
+    "q2_identical_exact_vector_order": {
+      "passed": true
+    },
+    "q3_database_reranker_mapping": {
+      "passed": true
+    },
+    "q3_oracle_vector_scope": {
+      "passed": true,
+      "returned": 8
+    },
+    "q3_oracle_lexical_scope": {
+      "passed": true,
+      "returned": 8
+    },
+    "q3_oracle_hybrid_scope": {
+      "passed": true,
+      "returned": 8
+    },
+    "q3_oracle_hybrid_rerank_scope": {
+      "passed": true,
+      "returned": 8
+    },
+    "q3_postgres_vector_scope": {
+      "passed": true,
+      "returned": 8
+    },
+    "q3_postgres_lexical_scope": {
+      "passed": true,
+      "returned": 8
+    },
+    "q3_postgres_hybrid_scope": {
+      "passed": true,
+      "returned": 8
+    },
+    "q3_postgres_hybrid_rerank_scope": {
+      "passed": true,
+      "returned": 8
+    },
+    "q3_identical_exact_vector_order": {
+      "passed": true
+    },
+    "q4_database_reranker_mapping": {
+      "passed": true
+    },
+    "q4_oracle_vector_scope": {
+      "passed": true,
+      "returned": 8
+    },
+    "q4_oracle_lexical_scope": {
+      "passed": true,
+      "returned": 7
+    },
+    "q4_oracle_hybrid_scope": {
+      "passed": true,
+      "returned": 8
+    },
+    "q4_oracle_hybrid_rerank_scope": {
+      "passed": true,
+      "returned": 8
+    },
+    "q4_postgres_vector_scope": {
+      "passed": true,
+      "returned": 8
+    },
+    "q4_postgres_lexical_scope": {
+      "passed": true,
+      "returned": 7
+    },
+    "q4_postgres_hybrid_scope": {
+      "passed": true,
+      "returned": 8
+    },
+    "q4_postgres_hybrid_rerank_scope": {
+      "passed": true,
+      "returned": 8
+    },
+    "q4_identical_exact_vector_order": {
+      "passed": true
+    },
+    "q5_database_reranker_mapping": {
+      "passed": true
+    },
+    "q5_oracle_vector_scope": {
+      "passed": true,
+      "returned": 8
+    },
+    "q5_oracle_lexical_scope": {
+      "passed": true,
+      "returned": 8
+    },
+    "q5_oracle_hybrid_scope": {
+      "passed": true,
+      "returned": 8
+    },
+    "q5_oracle_hybrid_rerank_scope": {
+      "passed": true,
+      "returned": 8
+    },
+    "q5_postgres_vector_scope": {
+      "passed": true,
+      "returned": 8
+    },
+    "q5_postgres_lexical_scope": {
+      "passed": true,
+      "returned": 8
+    },
+    "q5_postgres_hybrid_scope": {
+      "passed": true,
+      "returned": 8
+    },
+    "q5_postgres_hybrid_rerank_scope": {
+      "passed": true,
+      "returned": 8
+    },
+    "q5_identical_exact_vector_order": {
+      "passed": true
+    },
+    "q6_database_reranker_mapping": {
+      "passed": true
+    },
+    "q6_oracle_vector_scope": {
+      "passed": true,
+      "returned": 8
+    },
+    "q6_oracle_lexical_scope": {
+      "passed": true,
+      "returned": 8
+    },
+    "q6_oracle_hybrid_scope": {
+      "passed": true,
+      "returned": 8
+    },
+    "q6_oracle_hybrid_rerank_scope": {
+      "passed": true,
+      "returned": 8
+    },
+    "q6_postgres_vector_scope": {
+      "passed": true,
+      "returned": 8
+    },
+    "q6_postgres_lexical_scope": {
+      "passed": true,
+      "returned": 7
+    },
+    "q6_postgres_hybrid_scope": {
+      "passed": true,
+      "returned": 8
+    },
+    "q6_postgres_hybrid_rerank_scope": {
+      "passed": true,
+      "returned": 8
+    },
+    "q6_identical_exact_vector_order": {
+      "passed": true
+    },
+    "q7_database_reranker_mapping": {
+      "passed": true
+    },
+    "q7_oracle_vector_scope": {
+      "passed": true,
+      "returned": 8
+    },
+    "q7_oracle_lexical_scope": {
+      "passed": true,
+      "returned": 8
+    },
+    "q7_oracle_hybrid_scope": {
+      "passed": true,
+      "returned": 8
+    },
+    "q7_oracle_hybrid_rerank_scope": {
+      "passed": true,
+      "returned": 8
+    },
+    "q7_postgres_vector_scope": {
+      "passed": true,
+      "returned": 8
+    },
+    "q7_postgres_lexical_scope": {
+      "passed": true,
+      "returned": 8
+    },
+    "q7_postgres_hybrid_scope": {
+      "passed": true,
+      "returned": 8
+    },
+    "q7_postgres_hybrid_rerank_scope": {
+      "passed": true,
+      "returned": 8
+    },
+    "q7_identical_exact_vector_order": {
+      "passed": true
+    },
+    "q8_database_reranker_mapping": {
+      "passed": true
+    },
+    "q8_oracle_vector_scope": {
+      "passed": true,
+      "returned": 8
+    },
+    "q8_oracle_lexical_scope": {
+      "passed": true,
+      "returned": 8
+    },
+    "q8_oracle_hybrid_scope": {
+      "passed": true,
+      "returned": 8
+    },
+    "q8_oracle_hybrid_rerank_scope": {
+      "passed": true,
+      "returned": 8
+    },
+    "q8_postgres_vector_scope": {
+      "passed": true,
+      "returned": 8
+    },
+    "q8_postgres_lexical_scope": {
+      "passed": true,
+      "returned": 8
+    },
+    "q8_postgres_hybrid_scope": {
+      "passed": true,
+      "returned": 8
+    },
+    "q8_postgres_hybrid_rerank_scope": {
+      "passed": true,
+      "returned": 8
+    },
+    "q8_identical_exact_vector_order": {
+      "passed": true
+    },
+    "q1_depth10_reranker_mapping": {
+      "passed": true
+    },
+    "q1_oracle_depth10_scope": {
+      "passed": true
+    },
+    "q1_postgres_depth10_scope": {
+      "passed": true
+    },
+    "q2_depth10_reranker_mapping": {
+      "passed": true
+    },
+    "q2_oracle_depth10_scope": {
+      "passed": true
+    },
+    "q2_postgres_depth10_scope": {
+      "passed": true
+    },
+    "q3_depth10_reranker_mapping": {
+      "passed": true
+    },
+    "q3_oracle_depth10_scope": {
+      "passed": true
+    },
+    "q3_postgres_depth10_scope": {
+      "passed": true
+    },
+    "q4_depth10_reranker_mapping": {
+      "passed": true
+    },
+    "q4_oracle_depth10_scope": {
+      "passed": true
+    },
+    "q4_postgres_depth10_scope": {
+      "passed": true
+    },
+    "q5_depth10_reranker_mapping": {
+      "passed": true
+    },
+    "q5_oracle_depth10_scope": {
+      "passed": true
+    },
+    "q5_postgres_depth10_scope": {
+      "passed": true
+    },
+    "q6_depth10_reranker_mapping": {
+      "passed": true
+    },
+    "q6_oracle_depth10_scope": {
+      "passed": true
+    },
+    "q6_postgres_depth10_scope": {
+      "passed": true
+    },
+    "q7_depth10_reranker_mapping": {
+      "passed": true
+    },
+    "q7_oracle_depth10_scope": {
+      "passed": true
+    },
+    "q7_postgres_depth10_scope": {
+      "passed": true
+    },
+    "q8_depth10_reranker_mapping": {
+      "passed": true
+    },
+    "q8_oracle_depth10_scope": {
+      "passed": true
+    },
+    "q8_postgres_depth10_scope": {
+      "passed": true
+    },
+    "inline_raw_query_embedding": {
+      "passed": true,
+      "ids": [
+        "m01",
+        "m27",
+        "m29",
+        "m32",
+        "m02",
+        "m30",
+        "m33",
+        "m03",
+        "m31",
+        "m34"
+      ]
+    },
+    "text_N_freshness": {
+      "passed": true,
+      "before_commit": 0,
+      "after_commit": 0,
+      "after_sync": 3,
+      "rolled_back_matches": 0
+    },
+    "text_N_near": {
+      "passed": true,
+      "near_ids": [
+        "adjacent",
+        "nearby"
+      ],
+      "and_ids": [
+        "adjacent",
+        "far",
+        "nearby"
+      ]
+    },
+    "text_C_freshness": {
+      "passed": true,
+      "before_commit": 0,
+      "after_commit": 3,
+      "after_sync": 3,
+      "rolled_back_matches": 0
+    },
+    "text_C_near": {
+      "passed": true,
+      "near_ids": [
+        "adjacent",
+        "nearby"
+      ],
+      "and_ids": [
+        "adjacent",
+        "far",
+        "nearby"
+      ]
+    },
+    "database_row_policies": {
+      "passed": true,
+      "oracle_other_rows": 0,
+      "postgres_other_rows": 0,
+      "identity_model": "fixed acme predicate; not an end-user authentication test"
+    },
+    "dds_support_identity": {
+      "passed": true
+    },
+    "dds_support_row_and_cell_access": {
+      "passed": true,
+      "rows": [
+        [
+          1,
+          "acme",
+          "Support-owned billing case",
+          125
+        ],
+        [
+          2,
+          "acme",
+          "Finance-owned billing case",
+          null
+        ]
+      ]
+    },
+    "dds_support_broad_predicate": {
+      "passed": true,
+      "count": 2
+    },
+    "dds_support_authorized_payment_count": {
+      "passed": true,
+      "count": 1
+    },
+    "dds_finance_identity": {
+      "passed": true
+    },
+    "dds_finance_row_and_cell_access": {
+      "passed": true,
+      "rows": [
+        [
+          1,
+          "acme",
+          "Support-owned billing case",
+          125
+        ],
+        [
+          2,
+          "acme",
+          "Finance-owned billing case",
+          950
+        ]
+      ]
+    },
+    "dds_finance_broad_predicate": {
+      "passed": true,
+      "count": 2
+    },
+    "dds_finance_authorized_payment_count": {
+      "passed": true,
+      "count": 2
+    },
+    "dds_wrong_password_rejected": {
+      "passed": true,
+      "error_code": 1017
+    },
+    "dds_cleanup": {
+      "passed": true,
+      "failures": []
+    }
+  },
+  "objects": {
+    "oracle_memory": "PG_ORACLE_MEMORY",
+    "oracle_edges": "PG_ORACLE_EDGES",
+    "oracle_graph": "PG_ORACLE_GRAPH",
+    "postgres_memory": "postgres_oracle.memory"
+  },
+  "methodology": {
+    "documents": 100,
+    "queries": 8,
+    "corpus_version": "synthetic-100",
+    "eligible_active_acme": 79,
+    "superseded_acme": 9,
+    "other_tenant": 12,
+    "candidate_depth_per_branch": 8,
+    "fused_candidate_depth": 8,
+    "evaluation_k": 5,
+    "rrf_constant": 60,
+    "vector_search": "exact scans, no ANN indexes",
+    "embedding": "ALL_MINILM_L12_V2",
+    "reranker": "BGE_RERANKER",
+    "postgres_inference": "Oracle-generated vectors; same Oracle reranker scores applied externally in Python",
+    "rerank_api": "DBMS_VECTOR_CHAIN.UTL_TO_RERANK provider=database",
+    "judgments": "Editorial judgments specified from the full question and memory texts. All 800 pairs are explicitly judged. These are not independent human labels or a held-out evaluation.",
+    "qrels_version": "synthetic-100-qrels-v1",
+    "judged_pairs": 800,
+    "positive_pairs": 39,
+    "relevance_rubric": {
+      "3": "Directly answers the question or supplies an explicit actionable part of its answer for the correct entity and situation.",
+      "2": "Supplies substantive supporting evidence or a partial answer, such as an approval step without the approver or exclusion of a plausible endpoint.",
+      "1": "Supplies a useful qualification or execution prerequisite without answering the question. A shared word, entity, or broad topic alone is insufficient.",
+      "0": "Does not help answer or act on the question, concerns a different entity/situation, or fails the tenant/lifecycle filter."
+    },
+    "gain_function": "2**grade - 1",
+    "rank_discount": "1 / log2(rank + 1), rank starts at 1",
+    "ideal_ranking": "all judged memories sorted by grade, truncated at k",
+    "recall_relevance_threshold": 1,
+    "aggregation": "unweighted arithmetic mean across questions",
+    "not_tested": [
+      "production relevance",
+      "latency or throughput",
+      "managed service performance",
+      "Deep Data Security IAM/JWT propagation",
+      "built-in hybrid vector index",
+      "Apache AGE"
+    ]
+  },
+  "postgres": "18.6 (Debian 18.6-1.pgdg12+2)",
+  "source_sha256": {
+    "corpus.py": "dfb29b1eb145e589cca8dcf3f41e7a938d9bc7e976c6fb09fc76b35d78b0fd59",
+    "qrels.json": "ecf2a3f13aa088050f7f113d68bd273e93213dc6cb7ba9492e917728c6db6fd3",
+    "lab.py": "578fc7cc34606eb9d94f00e10d6927d8db68f1ecfd9c33b6e60ebdcb382e947e",
+    "notebook_display.py": "ec6eea17b8c05bf905c56345b755ce5c40f4611e2b3e0d12d15f2adca5369c5b",
+    "review_experiments.py": "1b4651fb04365c5e5285e874e3004832df636047ed105c2eea49c671ed81806b",
+    "dds_experiment.py": "533e72e308e68398206209005ef7eb3df0e9ee074bc378195fdd29960c56437c"
+  },
+  "models": [
+    {
+      "model": "ALL_MINILM_L12_V2",
+      "function": "EMBEDDING",
+      "created": "2026-08-31T18:09:46"
+    },
+    {
+      "model": "BGE_RERANKER",
+      "function": "REGRESSION",
+      "created": "2026-09-25T00:03:52"
+    }
+  ],
+  "extensions": {
+    "vector": "0.8.7",
+    "pg_textsearch": "1.5.0"
+  },
+  "retrieval": [
+    {
+      "query": "q1",
+      "system": "oracle",
+      "method": "vector",
+      "ids": [
+        "m01",
+        "m27",
+        "m29",
+        "m32",
+        "m02",
+        "m30",
+        "m33",
+        "m03"
+      ],
+      "ndcg_at_5": 0.8420926525813925,
+      "recall_at_8": 1.0
+    },
+    {
+      "query": "q1",
+      "system": "oracle",
+      "method": "lexical",
+      "ids": [
+        "m27",
+        "m03",
+        "m01",
+        "m02",
+        "m15",
+        "m29",
+        "m30",
+        "m32"
+      ],
+      "ndcg_at_5": 0.6176488370057234,
+      "recall_at_8": 1.0
+    },
+    {
+      "query": "q1",
+      "system": "oracle",
+      "method": "hybrid",
+      "ids": [
+        "m27",
+        "m01",
+        "m29",
+        "m02",
+        "m03",
+        "m32",
+        "m30",
+        "m15"
+      ],
+      "ndcg_at_5": 0.8489789197007895,
+      "recall_at_8": 1.0
+    },
+    {
+      "query": "q1",
+      "system": "oracle",
+      "method": "hybrid_rerank",
+      "ids": [
+        "m27",
+        "m01",
+        "m30",
+        "m29",
+        "m02",
+        "m32",
+        "m15",
+        "m03"
+      ],
+      "ndcg_at_5": 1.0,
+      "recall_at_8": 1.0
+    },
+    {
+      "query": "q1",
+      "system": "postgres",
+      "method": "vector",
+      "ids": [
+        "m01",
+        "m27",
+        "m29",
+        "m32",
+        "m02",
+        "m30",
+        "m33",
+        "m03"
+      ],
+      "ndcg_at_5": 0.8420926525813925,
+      "recall_at_8": 1.0
+    },
+    {
+      "query": "q1",
+      "system": "postgres",
+      "method": "lexical",
+      "ids": [
+        "m01",
+        "m32",
+        "m02",
+        "m30",
+        "m03",
+        "m27",
+        "m29",
+        "m34"
+      ],
+      "ndcg_at_5": 0.603124605141955,
+      "recall_at_8": 1.0
+    },
+    {
+      "query": "q1",
+      "system": "postgres",
+      "method": "hybrid",
+      "ids": [
+        "m01",
+        "m32",
+        "m27",
+        "m02",
+        "m29",
+        "m30",
+        "m03",
+        "m33"
+      ],
+      "ndcg_at_5": 0.7594882278124045,
+      "recall_at_8": 1.0
+    },
+    {
+      "query": "q1",
+      "system": "postgres",
+      "method": "hybrid_rerank",
+      "ids": [
+        "m27",
+        "m01",
+        "m30",
+        "m29",
+        "m02",
+        "m32",
+        "m03",
+        "m33"
+      ],
+      "ndcg_at_5": 1.0,
+      "recall_at_8": 1.0
+    },
+    {
+      "query": "q2",
+      "system": "oracle",
+      "method": "vector",
+      "ids": [
+        "m35",
+        "m37",
+        "m05",
+        "m38",
+        "m06",
+        "m54",
+        "m36",
+        "m39"
+      ],
+      "ndcg_at_5": 0.647806732038101,
+      "recall_at_8": 0.75
+    },
+    {
+      "query": "q2",
+      "system": "oracle",
+      "method": "lexical",
+      "ids": [
+        "m05",
+        "m35",
+        "m36",
+        "m40",
+        "m07",
+        "m37",
+        "m39"
+      ],
+      "ndcg_at_5": 0.9918887654809805,
+      "recall_at_8": 1.0
+    },
+    {
+      "query": "q2",
+      "system": "oracle",
+      "method": "hybrid",
+      "ids": [
+        "m35",
+        "m05",
+        "m37",
+        "m36",
+        "m39",
+        "m38",
+        "m40",
+        "m06"
+      ],
+      "ndcg_at_5": 0.8903482983305157,
+      "recall_at_8": 0.75
+    },
+    {
+      "query": "q2",
+      "system": "oracle",
+      "method": "hybrid_rerank",
+      "ids": [
+        "m35",
+        "m05",
+        "m36",
+        "m40",
+        "m37",
+        "m39",
+        "m06",
+        "m38"
+      ],
+      "ndcg_at_5": 0.920287093242588,
+      "recall_at_8": 0.75
+    },
+    {
+      "query": "q2",
+      "system": "postgres",
+      "method": "vector",
+      "ids": [
+        "m35",
+        "m37",
+        "m05",
+        "m38",
+        "m06",
+        "m54",
+        "m36",
+        "m39"
+      ],
+      "ndcg_at_5": 0.647806732038101,
+      "recall_at_8": 0.75
+    },
+    {
+      "query": "q2",
+      "system": "postgres",
+      "method": "lexical",
+      "ids": [
+        "m05",
+        "m35",
+        "m36",
+        "m39",
+        "m40",
+        "m07",
+        "m37"
+      ],
+      "ndcg_at_5": 0.920287093242588,
+      "recall_at_8": 1.0
+    },
+    {
+      "query": "q2",
+      "system": "postgres",
+      "method": "hybrid",
+      "ids": [
+        "m35",
+        "m05",
+        "m37",
+        "m36",
+        "m39",
+        "m38",
+        "m06",
+        "m40"
+      ],
+      "ndcg_at_5": 0.8903482983305157,
+      "recall_at_8": 0.75
+    },
+    {
+      "query": "q2",
+      "system": "postgres",
+      "method": "hybrid_rerank",
+      "ids": [
+        "m35",
+        "m05",
+        "m36",
+        "m40",
+        "m37",
+        "m39",
+        "m06",
+        "m38"
+      ],
+      "ndcg_at_5": 0.920287093242588,
+      "recall_at_8": 0.75
+    },
+    {
+      "query": "q3",
+      "system": "oracle",
+      "method": "vector",
+      "ids": [
+        "m41",
+        "m42",
+        "m09",
+        "m10",
+        "m28",
+        "m08",
+        "m48",
+        "m44"
+      ],
+      "ndcg_at_5": 1.0,
+      "recall_at_8": 1.0
+    },
+    {
+      "query": "q3",
+      "system": "oracle",
+      "method": "lexical",
+      "ids": [
+        "m08",
+        "m10",
+        "m41",
+        "m44",
+        "m09",
+        "m28",
+        "m42",
+        "m46"
+      ],
+      "ndcg_at_5": 0.5564942266819493,
+      "recall_at_8": 1.0
+    },
+    {
+      "query": "q3",
+      "system": "oracle",
+      "method": "hybrid",
+      "ids": [
+        "m41",
+        "m10",
+        "m08",
+        "m09",
+        "m42",
+        "m28",
+        "m44",
+        "m48"
+      ],
+      "ndcg_at_5": 0.8977263272807587,
+      "recall_at_8": 1.0
+    },
+    {
+      "query": "q3",
+      "system": "oracle",
+      "method": "hybrid_rerank",
+      "ids": [
+        "m09",
+        "m41",
+        "m42",
+        "m28",
+        "m10",
+        "m08",
+        "m44",
+        "m48"
+      ],
+      "ndcg_at_5": 0.9908183105074706,
+      "recall_at_8": 1.0
+    },
+    {
+      "query": "q3",
+      "system": "postgres",
+      "method": "vector",
+      "ids": [
+        "m41",
+        "m42",
+        "m09",
+        "m10",
+        "m28",
+        "m08",
+        "m48",
+        "m44"
+      ],
+      "ndcg_at_5": 1.0,
+      "recall_at_8": 1.0
+    },
+    {
+      "query": "q3",
+      "system": "postgres",
+      "method": "lexical",
+      "ids": [
+        "m41",
+        "m42",
+        "m10",
+        "m08",
+        "m46",
+        "m09",
+        "m44",
+        "m28"
+      ],
+      "ndcg_at_5": 0.781304342235672,
+      "recall_at_8": 1.0
+    },
+    {
+      "query": "q3",
+      "system": "postgres",
+      "method": "hybrid",
+      "ids": [
+        "m41",
+        "m42",
+        "m10",
+        "m09",
+        "m08",
+        "m28",
+        "m44",
+        "m46"
+      ],
+      "ndcg_at_5": 0.9392116896542794,
+      "recall_at_8": 1.0
+    },
+    {
+      "query": "q3",
+      "system": "postgres",
+      "method": "hybrid_rerank",
+      "ids": [
+        "m09",
+        "m41",
+        "m42",
+        "m28",
+        "m10",
+        "m08",
+        "m44",
+        "m46"
+      ],
+      "ndcg_at_5": 0.9908183105074706,
+      "recall_at_8": 1.0
+    },
+    {
+      "query": "q4",
+      "system": "oracle",
+      "method": "vector",
+      "ids": [
+        "m47",
+        "m49",
+        "m13",
+        "m12",
+        "m48",
+        "m52",
+        "m02",
+        "m01"
+      ],
+      "ndcg_at_5": 0.9047172294870752,
+      "recall_at_8": 1.0
+    },
+    {
+      "query": "q4",
+      "system": "oracle",
+      "method": "lexical",
+      "ids": [
+        "m12",
+        "m13",
+        "m47",
+        "m48",
+        "m49",
+        "m51",
+        "m52"
+      ],
+      "ndcg_at_5": 1.0,
+      "recall_at_8": 1.0
+    },
+    {
+      "query": "q4",
+      "system": "oracle",
+      "method": "hybrid",
+      "ids": [
+        "m47",
+        "m12",
+        "m13",
+        "m49",
+        "m48",
+        "m52",
+        "m51",
+        "m02"
+      ],
+      "ndcg_at_5": 0.9828920819566878,
+      "recall_at_8": 1.0
+    },
+    {
+      "query": "q4",
+      "system": "oracle",
+      "method": "hybrid_rerank",
+      "ids": [
+        "m47",
+        "m13",
+        "m48",
+        "m49",
+        "m52",
+        "m12",
+        "m51",
+        "m02"
+      ],
+      "ndcg_at_5": 0.8318724637288826,
+      "recall_at_8": 1.0
+    },
+    {
+      "query": "q4",
+      "system": "postgres",
+      "method": "vector",
+      "ids": [
+        "m47",
+        "m49",
+        "m13",
+        "m12",
+        "m48",
+        "m52",
+        "m02",
+        "m01"
+      ],
+      "ndcg_at_5": 0.9047172294870752,
+      "recall_at_8": 1.0
+    },
+    {
+      "query": "q4",
+      "system": "postgres",
+      "method": "lexical",
+      "ids": [
+        "m12",
+        "m48",
+        "m13",
+        "m47",
+        "m49",
+        "m51",
+        "m52"
+      ],
+      "ndcg_at_5": 1.0,
+      "recall_at_8": 1.0
+    },
+    {
+      "query": "q4",
+      "system": "postgres",
+      "method": "hybrid",
+      "ids": [
+        "m12",
+        "m47",
+        "m13",
+        "m48",
+        "m49",
+        "m52",
+        "m51",
+        "m02"
+      ],
+      "ndcg_at_5": 1.0,
+      "recall_at_8": 1.0
+    },
+    {
+      "query": "q4",
+      "system": "postgres",
+      "method": "hybrid_rerank",
+      "ids": [
+        "m47",
+        "m13",
+        "m48",
+        "m49",
+        "m52",
+        "m12",
+        "m51",
+        "m02"
+      ],
+      "ndcg_at_5": 0.8318724637288826,
+      "recall_at_8": 1.0
+    },
+    {
+      "query": "q5",
+      "system": "oracle",
+      "method": "vector",
+      "ids": [
+        "m53",
+        "m16",
+        "m15",
+        "m54",
+        "m56",
+        "m17",
+        "m19",
+        "m58"
+      ],
+      "ndcg_at_5": 0.9284219572374476,
+      "recall_at_8": 1.0
+    },
+    {
+      "query": "q5",
+      "system": "oracle",
+      "method": "lexical",
+      "ids": [
+        "m53",
+        "m27",
+        "m01",
+        "m02",
+        "m15",
+        "m17",
+        "m30",
+        "m32"
+      ],
+      "ndcg_at_5": 0.5849798774316773,
+      "recall_at_8": 0.6
+    },
+    {
+      "query": "q5",
+      "system": "oracle",
+      "method": "hybrid",
+      "ids": [
+        "m53",
+        "m15",
+        "m17",
+        "m16",
+        "m27",
+        "m01",
+        "m02",
+        "m54"
+      ],
+      "ndcg_at_5": 0.7959160554314038,
+      "recall_at_8": 1.0
+    },
+    {
+      "query": "q5",
+      "system": "oracle",
+      "method": "hybrid_rerank",
+      "ids": [
+        "m53",
+        "m15",
+        "m17",
+        "m54",
+        "m16",
+        "m01",
+        "m27",
+        "m02"
+      ],
+      "ndcg_at_5": 0.9696549384929989,
+      "recall_at_8": 1.0
+    },
+    {
+      "query": "q5",
+      "system": "postgres",
+      "method": "vector",
+      "ids": [
+        "m53",
+        "m16",
+        "m15",
+        "m54",
+        "m56",
+        "m17",
+        "m19",
+        "m58"
+      ],
+      "ndcg_at_5": 0.9284219572374476,
+      "recall_at_8": 1.0
+    },
+    {
+      "query": "q5",
+      "system": "postgres",
+      "method": "lexical",
+      "ids": [
+        "m15",
+        "m53",
+        "m54",
+        "m58",
+        "m16",
+        "m27",
+        "m52",
+        "m17"
+      ],
+      "ndcg_at_5": 0.9687669867279571,
+      "recall_at_8": 1.0
+    },
+    {
+      "query": "q5",
+      "system": "postgres",
+      "method": "hybrid",
+      "ids": [
+        "m53",
+        "m15",
+        "m16",
+        "m54",
+        "m58",
+        "m17",
+        "m56",
+        "m27"
+      ],
+      "ndcg_at_5": 0.9599800580361362,
+      "recall_at_8": 1.0
+    },
+    {
+      "query": "q5",
+      "system": "postgres",
+      "method": "hybrid_rerank",
+      "ids": [
+        "m53",
+        "m15",
+        "m17",
+        "m54",
+        "m16",
+        "m56",
+        "m58",
+        "m27"
+      ],
+      "ndcg_at_5": 0.9696549384929989,
+      "recall_at_8": 1.0
+    },
+    {
+      "query": "q6",
+      "system": "oracle",
+      "method": "vector",
+      "ids": [
+        "m59",
+        "m60",
+        "m61",
+        "m18",
+        "m62",
+        "m64",
+        "m53",
+        "m16"
+      ],
+      "ndcg_at_5": 0.9403186537777426,
+      "recall_at_8": 0.75
+    },
+    {
+      "query": "q6",
+      "system": "oracle",
+      "method": "lexical",
+      "ids": [
+        "m60",
+        "m59",
+        "m18",
+        "m05",
+        "m19",
+        "m35",
+        "m62",
+        "m07"
+      ],
+      "ndcg_at_5": 0.9971445088258525,
+      "recall_at_8": 1.0
+    },
+    {
+      "query": "q6",
+      "system": "oracle",
+      "method": "hybrid",
+      "ids": [
+        "m59",
+        "m60",
+        "m18",
+        "m62",
+        "m61",
+        "m05",
+        "m19",
+        "m35"
+      ],
+      "ndcg_at_5": 0.9719377486648056,
+      "recall_at_8": 1.0
+    },
+    {
+      "query": "q6",
+      "system": "oracle",
+      "method": "hybrid_rerank",
+      "ids": [
+        "m59",
+        "m60",
+        "m61",
+        "m18",
+        "m19",
+        "m35",
+        "m05",
+        "m62"
+      ],
+      "ndcg_at_5": 0.9655254139387894,
+      "recall_at_8": 1.0
+    },
+    {
+      "query": "q6",
+      "system": "postgres",
+      "method": "vector",
+      "ids": [
+        "m59",
+        "m60",
+        "m61",
+        "m18",
+        "m62",
+        "m64",
+        "m53",
+        "m16"
+      ],
+      "ndcg_at_5": 0.9403186537777426,
+      "recall_at_8": 0.75
+    },
+    {
+      "query": "q6",
+      "system": "postgres",
+      "method": "lexical",
+      "ids": [
+        "m18",
+        "m60",
+        "m59",
+        "m62",
+        "m19",
+        "m05",
+        "m35"
+      ],
+      "ndcg_at_5": 0.9971445088258525,
+      "recall_at_8": 1.0
+    },
+    {
+      "query": "q6",
+      "system": "postgres",
+      "method": "hybrid",
+      "ids": [
+        "m59",
+        "m60",
+        "m18",
+        "m62",
+        "m61",
+        "m19",
+        "m05",
+        "m64"
+      ],
+      "ndcg_at_5": 0.9719377486648056,
+      "recall_at_8": 1.0
+    },
+    {
+      "query": "q6",
+      "system": "postgres",
+      "method": "hybrid_rerank",
+      "ids": [
+        "m59",
+        "m60",
+        "m61",
+        "m18",
+        "m19",
+        "m64",
+        "m05",
+        "m62"
+      ],
+      "ndcg_at_5": 0.9655254139387894,
+      "recall_at_8": 1.0
+    },
+    {
+      "query": "q7",
+      "system": "oracle",
+      "method": "vector",
+      "ids": [
+        "m65",
+        "m66",
+        "m70",
+        "m21",
+        "m69",
+        "m67",
+        "m63",
+        "m62"
+      ],
+      "ndcg_at_5": 0.939490267096745,
+      "recall_at_8": 0.75
+    },
+    {
+      "query": "q7",
+      "system": "oracle",
+      "method": "lexical",
+      "ids": [
+        "m21",
+        "m65",
+        "m66",
+        "m07",
+        "m22",
+        "m23",
+        "m35",
+        "m36"
+      ],
+      "ndcg_at_5": 0.925613304997084,
+      "recall_at_8": 0.5
+    },
+    {
+      "query": "q7",
+      "system": "oracle",
+      "method": "hybrid",
+      "ids": [
+        "m65",
+        "m21",
+        "m66",
+        "m70",
+        "m07",
+        "m22",
+        "m69",
+        "m23"
+      ],
+      "ndcg_at_5": 0.9331825676523733,
+      "recall_at_8": 0.75
+    },
+    {
+      "query": "q7",
+      "system": "oracle",
+      "method": "hybrid_rerank",
+      "ids": [
+        "m66",
+        "m65",
+        "m21",
+        "m70",
+        "m69",
+        "m23",
+        "m22",
+        "m07"
+      ],
+      "ndcg_at_5": 0.9554550451015821,
+      "recall_at_8": 0.75
+    },
+    {
+      "query": "q7",
+      "system": "postgres",
+      "method": "vector",
+      "ids": [
+        "m65",
+        "m66",
+        "m70",
+        "m21",
+        "m69",
+        "m67",
+        "m63",
+        "m62"
+      ],
+      "ndcg_at_5": 0.939490267096745,
+      "recall_at_8": 0.75
+    },
+    {
+      "query": "q7",
+      "system": "postgres",
+      "method": "lexical",
+      "ids": [
+        "m21",
+        "m65",
+        "m22",
+        "m66",
+        "m69",
+        "m70",
+        "m23",
+        "m67"
+      ],
+      "ndcg_at_5": 0.939490267096745,
+      "recall_at_8": 0.875
+    },
+    {
+      "query": "q7",
+      "system": "postgres",
+      "method": "hybrid",
+      "ids": [
+        "m65",
+        "m21",
+        "m66",
+        "m70",
+        "m69",
+        "m67",
+        "m22",
+        "m23"
+      ],
+      "ndcg_at_5": 0.9554550451015821,
+      "recall_at_8": 0.875
+    },
+    {
+      "query": "q7",
+      "system": "postgres",
+      "method": "hybrid_rerank",
+      "ids": [
+        "m66",
+        "m65",
+        "m21",
+        "m70",
+        "m69",
+        "m23",
+        "m22",
+        "m67"
+      ],
+      "ndcg_at_5": 0.9554550451015821,
+      "recall_at_8": 0.875
+    },
+    {
+      "query": "q8",
+      "system": "oracle",
+      "method": "vector",
+      "ids": [
+        "m71",
+        "m24",
+        "m72",
+        "m73",
+        "m25",
+        "m76",
+        "m26",
+        "m74"
+      ],
+      "ndcg_at_5": 0.9918887654809805,
+      "recall_at_8": 1.0
+    },
+    {
+      "query": "q8",
+      "system": "oracle",
+      "method": "lexical",
+      "ids": [
+        "m24",
+        "m71",
+        "m72",
+        "m75",
+        "m25",
+        "m26",
+        "m73",
+        "m74"
+      ],
+      "ndcg_at_5": 0.9918887654809805,
+      "recall_at_8": 1.0
+    },
+    {
+      "query": "q8",
+      "system": "oracle",
+      "method": "hybrid",
+      "ids": [
+        "m24",
+        "m71",
+        "m72",
+        "m25",
+        "m73",
+        "m26",
+        "m74",
+        "m75"
+      ],
+      "ndcg_at_5": 1.0,
+      "recall_at_8": 1.0
+    },
+    {
+      "query": "q8",
+      "system": "oracle",
+      "method": "hybrid_rerank",
+      "ids": [
+        "m24",
+        "m71",
+        "m72",
+        "m25",
+        "m74",
+        "m73",
+        "m26",
+        "m75"
+      ],
+      "ndcg_at_5": 1.0,
+      "recall_at_8": 1.0
+    },
+    {
+      "query": "q8",
+      "system": "postgres",
+      "method": "vector",
+      "ids": [
+        "m71",
+        "m24",
+        "m72",
+        "m73",
+        "m25",
+        "m76",
+        "m26",
+        "m74"
+      ],
+      "ndcg_at_5": 0.9918887654809805,
+      "recall_at_8": 1.0
+    },
+    {
+      "query": "q8",
+      "system": "postgres",
+      "method": "lexical",
+      "ids": [
+        "m24",
+        "m71",
+        "m25",
+        "m72",
+        "m75",
+        "m73",
+        "m26",
+        "m74"
+      ],
+      "ndcg_at_5": 0.9828921171931015,
+      "recall_at_8": 1.0
+    },
+    {
+      "query": "q8",
+      "system": "postgres",
+      "method": "hybrid",
+      "ids": [
+        "m24",
+        "m71",
+        "m72",
+        "m25",
+        "m73",
+        "m26",
+        "m74",
+        "m75"
+      ],
+      "ndcg_at_5": 1.0,
+      "recall_at_8": 1.0
+    },
+    {
+      "query": "q8",
+      "system": "postgres",
+      "method": "hybrid_rerank",
+      "ids": [
+        "m24",
+        "m71",
+        "m72",
+        "m25",
+        "m74",
+        "m73",
+        "m26",
+        "m75"
+      ],
+      "ndcg_at_5": 1.0,
+      "recall_at_8": 1.0
+    }
+  ],
+  "retrieval_summary": [
+    {
+      "system": "oracle",
+      "method": "vector",
+      "mean_ndcg_at_5": 0.8993420322124356,
+      "mean_recall_at_8": 0.90625
+    },
+    {
+      "system": "oracle",
+      "method": "lexical",
+      "mean_ndcg_at_5": 0.8332072857380309,
+      "mean_recall_at_8": 0.8875
+    },
+    {
+      "system": "oracle",
+      "method": "hybrid",
+      "mean_ndcg_at_5": 0.9151227498771668,
+      "mean_recall_at_8": 0.9375
+    },
+    {
+      "system": "oracle",
+      "method": "hybrid_rerank",
+      "mean_ndcg_at_5": 0.9542016581265389,
+      "mean_recall_at_8": 0.9375
+    },
+    {
+      "system": "postgres",
+      "method": "vector",
+      "mean_ndcg_at_5": 0.8993420322124356,
+      "mean_recall_at_8": 0.90625
+    },
+    {
+      "system": "postgres",
+      "method": "lexical",
+      "mean_ndcg_at_5": 0.8991262400579839,
+      "mean_recall_at_8": 0.984375
+    },
+    {
+      "system": "postgres",
+      "method": "hybrid",
+      "mean_ndcg_at_5": 0.9345526334499654,
+      "mean_recall_at_8": 0.953125
+    },
+    {
+      "system": "postgres",
+      "method": "hybrid_rerank",
+      "mean_ndcg_at_5": 0.9542016581265389,
+      "mean_recall_at_8": 0.953125
+    }
+  ],
+  "review_followups": {
+    "retrieval_depth10": {
+      "candidate_depth": 10,
+      "fused_depth": 10,
+      "rrf_constant": 60,
+      "summary": [
+        {
+          "system": "oracle",
+          "method": "vector",
+          "mean_ndcg_at_5": 0.8993420322124356,
+          "mean_ndcg_at_10": 0.9397412346171017,
+          "mean_recall_at_10": 0.9375
+        },
+        {
+          "system": "oracle",
+          "method": "lexical",
+          "mean_ndcg_at_5": 0.8332072857380309,
+          "mean_ndcg_at_10": 0.902404165348376,
+          "mean_recall_at_10": 0.94375
+        },
+        {
+          "system": "oracle",
+          "method": "hybrid",
+          "mean_ndcg_at_5": 0.9392020351101562,
+          "mean_ndcg_at_10": 0.973867943573305,
+          "mean_recall_at_10": 0.984375
+        },
+        {
+          "system": "oracle",
+          "method": "hybrid_rerank",
+          "mean_ndcg_at_5": 0.9600010221362072,
+          "mean_ndcg_at_10": 0.9816502197438011,
+          "mean_recall_at_10": 0.984375
+        },
+        {
+          "system": "postgres",
+          "method": "vector",
+          "mean_ndcg_at_5": 0.8993420322124356,
+          "mean_ndcg_at_10": 0.9397412346171017,
+          "mean_recall_at_10": 0.9375
+        },
+        {
+          "system": "postgres",
+          "method": "lexical",
+          "mean_ndcg_at_5": 0.8991262400579839,
+          "mean_ndcg_at_10": 0.9664973689583256,
+          "mean_recall_at_10": 0.984375
+        },
+        {
+          "system": "postgres",
+          "method": "hybrid",
+          "mean_ndcg_at_5": 0.9345526334499654,
+          "mean_ndcg_at_10": 0.9741501152251242,
+          "mean_recall_at_10": 0.984375
+        },
+        {
+          "system": "postgres",
+          "method": "hybrid_rerank",
+          "mean_ndcg_at_5": 0.963151867156338,
+          "mean_ndcg_at_10": 0.9825344985780925,
+          "mean_recall_at_10": 0.984375
+        }
+      ],
+      "queries": [
+        {
+          "query": "q1",
+          "system": "oracle",
+          "method": "vector",
+          "ids": [
+            "m01",
+            "m27",
+            "m29",
+            "m32",
+            "m02",
+            "m30",
+            "m33",
+            "m03",
+            "m31",
+            "m34"
+          ],
+          "ndcg_at_5": 0.8420926525813925,
+          "ndcg_at_10": 0.972695841896577,
+          "recall_at_10": 1.0
+        },
+        {
+          "query": "q1",
+          "system": "oracle",
+          "method": "lexical",
+          "ids": [
+            "m27",
+            "m03",
+            "m01",
+            "m02",
+            "m15",
+            "m29",
+            "m30",
+            "m32",
+            "m34",
+            "m53"
+          ],
+          "ndcg_at_5": 0.6176488370057234,
+          "ndcg_at_10": 0.8704685284410424,
+          "recall_at_10": 1.0
+        },
+        {
+          "query": "q1",
+          "system": "oracle",
+          "method": "hybrid",
+          "ids": [
+            "m27",
+            "m01",
+            "m29",
+            "m02",
+            "m03",
+            "m32",
+            "m30",
+            "m34",
+            "m15",
+            "m33"
+          ],
+          "ndcg_at_5": 0.8489789197007895,
+          "ndcg_at_10": 0.9711954218209241,
+          "recall_at_10": 1.0
+        },
+        {
+          "query": "q1",
+          "system": "oracle",
+          "method": "hybrid_rerank",
+          "ids": [
+            "m27",
+            "m01",
+            "m30",
+            "m29",
+            "m02",
+            "m32",
+            "m15",
+            "m03",
+            "m34",
+            "m33"
+          ],
+          "ndcg_at_5": 1.0,
+          "ndcg_at_10": 1.0,
+          "recall_at_10": 1.0
+        },
+        {
+          "query": "q1",
+          "system": "postgres",
+          "method": "vector",
+          "ids": [
+            "m01",
+            "m27",
+            "m29",
+            "m32",
+            "m02",
+            "m30",
+            "m33",
+            "m03",
+            "m31",
+            "m34"
+          ],
+          "ndcg_at_5": 0.8420926525813925,
+          "ndcg_at_10": 0.972695841896577,
+          "recall_at_10": 1.0
+        },
+        {
+          "query": "q1",
+          "system": "postgres",
+          "method": "lexical",
+          "ids": [
+            "m01",
+            "m32",
+            "m02",
+            "m30",
+            "m03",
+            "m27",
+            "m29",
+            "m34",
+            "m33",
+            "m15"
+          ],
+          "ndcg_at_5": 0.603124605141955,
+          "ndcg_at_10": 0.855944296577274,
+          "recall_at_10": 1.0
+        },
+        {
+          "query": "q1",
+          "system": "postgres",
+          "method": "hybrid",
+          "ids": [
+            "m01",
+            "m32",
+            "m27",
+            "m02",
+            "m29",
+            "m30",
+            "m03",
+            "m33",
+            "m34",
+            "m31"
+          ],
+          "ndcg_at_5": 0.7594882278124045,
+          "ndcg_at_10": 0.8900914171275889,
+          "recall_at_10": 1.0
+        },
+        {
+          "query": "q1",
+          "system": "postgres",
+          "method": "hybrid_rerank",
+          "ids": [
+            "m27",
+            "m01",
+            "m30",
+            "m29",
+            "m02",
+            "m32",
+            "m03",
+            "m34",
+            "m31",
+            "m33"
+          ],
+          "ndcg_at_5": 1.0,
+          "ndcg_at_10": 1.0,
+          "recall_at_10": 1.0
+        },
+        {
+          "query": "q2",
+          "system": "oracle",
+          "method": "vector",
+          "ids": [
+            "m35",
+            "m37",
+            "m05",
+            "m38",
+            "m06",
+            "m54",
+            "m36",
+            "m39",
+            "m07",
+            "m30"
+          ],
+          "ndcg_at_5": 0.647806732038101,
+          "ndcg_at_10": 0.8474807143839885,
+          "recall_at_10": 1.0
+        },
+        {
+          "query": "q2",
+          "system": "oracle",
+          "method": "lexical",
+          "ids": [
+            "m05",
+            "m35",
+            "m36",
+            "m40",
+            "m07",
+            "m37",
+            "m39"
+          ],
+          "ndcg_at_5": 0.9918887654809805,
+          "ndcg_at_10": 0.9918887654809805,
+          "recall_at_10": 1.0
+        },
+        {
+          "query": "q2",
+          "system": "oracle",
+          "method": "hybrid",
+          "ids": [
+            "m35",
+            "m05",
+            "m37",
+            "m36",
+            "m07",
+            "m39",
+            "m38",
+            "m40",
+            "m06",
+            "m54"
+          ],
+          "ndcg_at_5": 0.9619499705689082,
+          "ndcg_at_10": 0.9619499705689082,
+          "recall_at_10": 1.0
+        },
+        {
+          "query": "q2",
+          "system": "oracle",
+          "method": "hybrid_rerank",
+          "ids": [
+            "m35",
+            "m05",
+            "m36",
+            "m40",
+            "m07",
+            "m37",
+            "m39",
+            "m06",
+            "m54",
+            "m38"
+          ],
+          "ndcg_at_5": 0.9918887654809805,
+          "ndcg_at_10": 0.9918887654809805,
+          "recall_at_10": 1.0
+        },
+        {
+          "query": "q2",
+          "system": "postgres",
+          "method": "vector",
+          "ids": [
+            "m35",
+            "m37",
+            "m05",
+            "m38",
+            "m06",
+            "m54",
+            "m36",
+            "m39",
+            "m07",
+            "m30"
+          ],
+          "ndcg_at_5": 0.647806732038101,
+          "ndcg_at_10": 0.8474807143839885,
+          "recall_at_10": 1.0
+        },
+        {
+          "query": "q2",
+          "system": "postgres",
+          "method": "lexical",
+          "ids": [
+            "m05",
+            "m35",
+            "m36",
+            "m39",
+            "m40",
+            "m07",
+            "m37"
+          ],
+          "ndcg_at_5": 0.920287093242588,
+          "ndcg_at_10": 0.98621664004514,
+          "recall_at_10": 1.0
+        },
+        {
+          "query": "q2",
+          "system": "postgres",
+          "method": "hybrid",
+          "ids": [
+            "m35",
+            "m05",
+            "m37",
+            "m36",
+            "m39",
+            "m07",
+            "m38",
+            "m06",
+            "m40",
+            "m54"
+          ],
+          "ndcg_at_5": 0.8903482983305157,
+          "ndcg_at_10": 0.9562778451330678,
+          "recall_at_10": 1.0
+        },
+        {
+          "query": "q2",
+          "system": "postgres",
+          "method": "hybrid_rerank",
+          "ids": [
+            "m35",
+            "m05",
+            "m36",
+            "m40",
+            "m07",
+            "m37",
+            "m39",
+            "m06",
+            "m54",
+            "m38"
+          ],
+          "ndcg_at_5": 0.9918887654809805,
+          "ndcg_at_10": 0.9918887654809805,
+          "recall_at_10": 1.0
+        },
+        {
+          "query": "q3",
+          "system": "oracle",
+          "method": "vector",
+          "ids": [
+            "m41",
+            "m42",
+            "m09",
+            "m10",
+            "m28",
+            "m08",
+            "m48",
+            "m44",
+            "m43",
+            "m45"
+          ],
+          "ndcg_at_5": 1.0,
+          "ndcg_at_10": 1.0,
+          "recall_at_10": 1.0
+        },
+        {
+          "query": "q3",
+          "system": "oracle",
+          "method": "lexical",
+          "ids": [
+            "m08",
+            "m10",
+            "m41",
+            "m44",
+            "m09",
+            "m28",
+            "m42",
+            "m46"
+          ],
+          "ndcg_at_5": 0.5564942266819493,
+          "ndcg_at_10": 0.7346835242228773,
+          "recall_at_10": 1.0
+        },
+        {
+          "query": "q3",
+          "system": "oracle",
+          "method": "hybrid",
+          "ids": [
+            "m41",
+            "m10",
+            "m08",
+            "m09",
+            "m42",
+            "m28",
+            "m44",
+            "m48",
+            "m46",
+            "m43"
+          ],
+          "ndcg_at_5": 0.8977263272807587,
+          "ndcg_at_10": 0.9536991227015519,
+          "recall_at_10": 1.0
+        },
+        {
+          "query": "q3",
+          "system": "oracle",
+          "method": "hybrid_rerank",
+          "ids": [
+            "m09",
+            "m41",
+            "m42",
+            "m28",
+            "m10",
+            "m08",
+            "m44",
+            "m43",
+            "m48",
+            "m46"
+          ],
+          "ndcg_at_5": 0.9908183105074706,
+          "ndcg_at_10": 0.9908183105074706,
+          "recall_at_10": 1.0
+        },
+        {
+          "query": "q3",
+          "system": "postgres",
+          "method": "vector",
+          "ids": [
+            "m41",
+            "m42",
+            "m09",
+            "m10",
+            "m28",
+            "m08",
+            "m48",
+            "m44",
+            "m43",
+            "m45"
+          ],
+          "ndcg_at_5": 1.0,
+          "ndcg_at_10": 1.0,
+          "recall_at_10": 1.0
+        },
+        {
+          "query": "q3",
+          "system": "postgres",
+          "method": "lexical",
+          "ids": [
+            "m41",
+            "m42",
+            "m10",
+            "m08",
+            "m46",
+            "m09",
+            "m44",
+            "m28"
+          ],
+          "ndcg_at_5": 0.781304342235672,
+          "ndcg_at_10": 0.961478263556942,
+          "recall_at_10": 1.0
+        },
+        {
+          "query": "q3",
+          "system": "postgres",
+          "method": "hybrid",
+          "ids": [
+            "m41",
+            "m42",
+            "m10",
+            "m09",
+            "m08",
+            "m28",
+            "m44",
+            "m46",
+            "m48",
+            "m43"
+          ],
+          "ndcg_at_5": 0.9392116896542794,
+          "ndcg_at_10": 0.9951844850750728,
+          "recall_at_10": 1.0
+        },
+        {
+          "query": "q3",
+          "system": "postgres",
+          "method": "hybrid_rerank",
+          "ids": [
+            "m09",
+            "m41",
+            "m42",
+            "m28",
+            "m10",
+            "m08",
+            "m44",
+            "m43",
+            "m48",
+            "m46"
+          ],
+          "ndcg_at_5": 0.9908183105074706,
+          "ndcg_at_10": 0.9908183105074706,
+          "recall_at_10": 1.0
+        },
+        {
+          "query": "q4",
+          "system": "oracle",
+          "method": "vector",
+          "ids": [
+            "m47",
+            "m49",
+            "m13",
+            "m12",
+            "m48",
+            "m52",
+            "m02",
+            "m01",
+            "m03",
+            "m29"
+          ],
+          "ndcg_at_5": 0.9047172294870752,
+          "ndcg_at_10": 0.9047172294870752,
+          "recall_at_10": 1.0
+        },
+        {
+          "query": "q4",
+          "system": "oracle",
+          "method": "lexical",
+          "ids": [
+            "m12",
+            "m13",
+            "m47",
+            "m48",
+            "m49",
+            "m51",
+            "m52"
+          ],
+          "ndcg_at_5": 1.0,
+          "ndcg_at_10": 1.0,
+          "recall_at_10": 1.0
+        },
+        {
+          "query": "q4",
+          "system": "oracle",
+          "method": "hybrid",
+          "ids": [
+            "m47",
+            "m12",
+            "m13",
+            "m49",
+            "m48",
+            "m52",
+            "m51",
+            "m02",
+            "m01",
+            "m03"
+          ],
+          "ndcg_at_5": 0.9828920819566878,
+          "ndcg_at_10": 0.9828920819566878,
+          "recall_at_10": 1.0
+        },
+        {
+          "query": "q4",
+          "system": "oracle",
+          "method": "hybrid_rerank",
+          "ids": [
+            "m47",
+            "m13",
+            "m48",
+            "m49",
+            "m52",
+            "m12",
+            "m51",
+            "m02",
+            "m01",
+            "m03"
+          ],
+          "ndcg_at_5": 0.8318724637288826,
+          "ndcg_at_10": 0.9709286432396581,
+          "recall_at_10": 1.0
+        },
+        {
+          "query": "q4",
+          "system": "postgres",
+          "method": "vector",
+          "ids": [
+            "m47",
+            "m49",
+            "m13",
+            "m12",
+            "m48",
+            "m52",
+            "m02",
+            "m01",
+            "m03",
+            "m29"
+          ],
+          "ndcg_at_5": 0.9047172294870752,
+          "ndcg_at_10": 0.9047172294870752,
+          "recall_at_10": 1.0
+        },
+        {
+          "query": "q4",
+          "system": "postgres",
+          "method": "lexical",
+          "ids": [
+            "m12",
+            "m48",
+            "m13",
+            "m47",
+            "m49",
+            "m51",
+            "m52"
+          ],
+          "ndcg_at_5": 1.0,
+          "ndcg_at_10": 1.0,
+          "recall_at_10": 1.0
+        },
+        {
+          "query": "q4",
+          "system": "postgres",
+          "method": "hybrid",
+          "ids": [
+            "m12",
+            "m47",
+            "m13",
+            "m48",
+            "m49",
+            "m52",
+            "m51",
+            "m02",
+            "m01",
+            "m03"
+          ],
+          "ndcg_at_5": 1.0,
+          "ndcg_at_10": 1.0,
+          "recall_at_10": 1.0
+        },
+        {
+          "query": "q4",
+          "system": "postgres",
+          "method": "hybrid_rerank",
+          "ids": [
+            "m47",
+            "m13",
+            "m48",
+            "m49",
+            "m52",
+            "m12",
+            "m51",
+            "m02",
+            "m01",
+            "m03"
+          ],
+          "ndcg_at_5": 0.8318724637288826,
+          "ndcg_at_10": 0.9709286432396581,
+          "recall_at_10": 1.0
+        },
+        {
+          "query": "q5",
+          "system": "oracle",
+          "method": "vector",
+          "ids": [
+            "m53",
+            "m16",
+            "m15",
+            "m54",
+            "m56",
+            "m17",
+            "m19",
+            "m58",
+            "m06",
+            "m30"
+          ],
+          "ndcg_at_5": 0.9284219572374476,
+          "ndcg_at_10": 0.9498861813907398,
+          "recall_at_10": 1.0
+        },
+        {
+          "query": "q5",
+          "system": "oracle",
+          "method": "lexical",
+          "ids": [
+            "m53",
+            "m27",
+            "m01",
+            "m02",
+            "m15",
+            "m17",
+            "m30",
+            "m32",
+            "m52",
+            "m54"
+          ],
+          "ndcg_at_5": 0.5849798774316773,
+          "ndcg_at_10": 0.7283727632188136,
+          "recall_at_10": 0.8
+        },
+        {
+          "query": "q5",
+          "system": "oracle",
+          "method": "hybrid",
+          "ids": [
+            "m53",
+            "m15",
+            "m17",
+            "m54",
+            "m30",
+            "m16",
+            "m27",
+            "m01",
+            "m02",
+            "m56"
+          ],
+          "ndcg_at_5": 0.8997223627112435,
+          "ndcg_at_10": 0.9641150351711202,
+          "recall_at_10": 1.0
+        },
+        {
+          "query": "q5",
+          "system": "oracle",
+          "method": "hybrid_rerank",
+          "ids": [
+            "m53",
+            "m15",
+            "m17",
+            "m54",
+            "m16",
+            "m56",
+            "m30",
+            "m01",
+            "m27",
+            "m02"
+          ],
+          "ndcg_at_5": 0.9696549384929989,
+          "ndcg_at_10": 0.9696549384929989,
+          "recall_at_10": 1.0
+        },
+        {
+          "query": "q5",
+          "system": "postgres",
+          "method": "vector",
+          "ids": [
+            "m53",
+            "m16",
+            "m15",
+            "m54",
+            "m56",
+            "m17",
+            "m19",
+            "m58",
+            "m06",
+            "m30"
+          ],
+          "ndcg_at_5": 0.9284219572374476,
+          "ndcg_at_10": 0.9498861813907398,
+          "recall_at_10": 1.0
+        },
+        {
+          "query": "q5",
+          "system": "postgres",
+          "method": "lexical",
+          "ids": [
+            "m15",
+            "m53",
+            "m54",
+            "m58",
+            "m16",
+            "m27",
+            "m52",
+            "m17",
+            "m57",
+            "m01"
+          ],
+          "ndcg_at_5": 0.9687669867279571,
+          "ndcg_at_10": 0.9877761731590163,
+          "recall_at_10": 1.0
+        },
+        {
+          "query": "q5",
+          "system": "postgres",
+          "method": "hybrid",
+          "ids": [
+            "m53",
+            "m15",
+            "m16",
+            "m54",
+            "m58",
+            "m17",
+            "m56",
+            "m27",
+            "m19",
+            "m52"
+          ],
+          "ndcg_at_5": 0.9599800580361362,
+          "ndcg_at_10": 0.9814442821894285,
+          "recall_at_10": 1.0
+        },
+        {
+          "query": "q5",
+          "system": "postgres",
+          "method": "hybrid_rerank",
+          "ids": [
+            "m53",
+            "m15",
+            "m17",
+            "m54",
+            "m16",
+            "m19",
+            "m56",
+            "m58",
+            "m27",
+            "m52"
+          ],
+          "ndcg_at_5": 0.9696549384929989,
+          "ndcg_at_10": 0.9696549384929989,
+          "recall_at_10": 1.0
+        },
+        {
+          "query": "q6",
+          "system": "oracle",
+          "method": "vector",
+          "ids": [
+            "m59",
+            "m60",
+            "m61",
+            "m18",
+            "m62",
+            "m64",
+            "m53",
+            "m16",
+            "m28",
+            "m56"
+          ],
+          "ndcg_at_5": 0.9403186537777426,
+          "ndcg_at_10": 0.9403186537777426,
+          "recall_at_10": 0.75
+        },
+        {
+          "query": "q6",
+          "system": "oracle",
+          "method": "lexical",
+          "ids": [
+            "m60",
+            "m59",
+            "m18",
+            "m05",
+            "m19",
+            "m35",
+            "m62",
+            "m07",
+            "m09",
+            "m16"
+          ],
+          "ndcg_at_5": 0.9971445088258525,
+          "ndcg_at_10": 0.9971445088258525,
+          "recall_at_10": 1.0
+        },
+        {
+          "query": "q6",
+          "system": "oracle",
+          "method": "hybrid",
+          "ids": [
+            "m59",
+            "m60",
+            "m18",
+            "m62",
+            "m16",
+            "m61",
+            "m05",
+            "m19",
+            "m35",
+            "m64"
+          ],
+          "ndcg_at_5": 0.9719377486648056,
+          "ndcg_at_10": 0.9924929762337011,
+          "recall_at_10": 1.0
+        },
+        {
+          "query": "q6",
+          "system": "oracle",
+          "method": "hybrid_rerank",
+          "ids": [
+            "m59",
+            "m60",
+            "m61",
+            "m18",
+            "m16",
+            "m19",
+            "m64",
+            "m35",
+            "m05",
+            "m62"
+          ],
+          "ndcg_at_5": 0.9403186537777426,
+          "ndcg_at_10": 0.9635285903871191,
+          "recall_at_10": 1.0
+        },
+        {
+          "query": "q6",
+          "system": "postgres",
+          "method": "vector",
+          "ids": [
+            "m59",
+            "m60",
+            "m61",
+            "m18",
+            "m62",
+            "m64",
+            "m53",
+            "m16",
+            "m28",
+            "m56"
+          ],
+          "ndcg_at_5": 0.9403186537777426,
+          "ndcg_at_10": 0.9403186537777426,
+          "recall_at_10": 0.75
+        },
+        {
+          "query": "q6",
+          "system": "postgres",
+          "method": "lexical",
+          "ids": [
+            "m18",
+            "m60",
+            "m59",
+            "m62",
+            "m19",
+            "m05",
+            "m35"
+          ],
+          "ndcg_at_5": 0.9971445088258525,
+          "ndcg_at_10": 0.9971445088258525,
+          "recall_at_10": 1.0
+        },
+        {
+          "query": "q6",
+          "system": "postgres",
+          "method": "hybrid",
+          "ids": [
+            "m59",
+            "m60",
+            "m18",
+            "m62",
+            "m61",
+            "m19",
+            "m05",
+            "m64",
+            "m35",
+            "m53"
+          ],
+          "ndcg_at_5": 0.9719377486648056,
+          "ndcg_at_10": 0.9951476852741822,
+          "recall_at_10": 1.0
+        },
+        {
+          "query": "q6",
+          "system": "postgres",
+          "method": "hybrid_rerank",
+          "ids": [
+            "m59",
+            "m60",
+            "m61",
+            "m18",
+            "m19",
+            "m53",
+            "m64",
+            "m35",
+            "m05",
+            "m62"
+          ],
+          "ndcg_at_5": 0.9655254139387894,
+          "ndcg_at_10": 0.9655254139387894,
+          "recall_at_10": 1.0
+        },
+        {
+          "query": "q7",
+          "system": "oracle",
+          "method": "vector",
+          "ids": [
+            "m65",
+            "m66",
+            "m70",
+            "m21",
+            "m69",
+            "m67",
+            "m63",
+            "m62",
+            "m59",
+            "m23"
+          ],
+          "ndcg_at_5": 0.939490267096745,
+          "ndcg_at_10": 0.9109424905197098,
+          "recall_at_10": 0.75
+        },
+        {
+          "query": "q7",
+          "system": "oracle",
+          "method": "lexical",
+          "ids": [
+            "m21",
+            "m65",
+            "m66",
+            "m07",
+            "m22",
+            "m23",
+            "m35",
+            "m36",
+            "m67",
+            "m69"
+          ],
+          "ndcg_at_5": 0.925613304997084,
+          "ndcg_at_10": 0.9047864671164607,
+          "recall_at_10": 0.75
+        },
+        {
+          "query": "q7",
+          "system": "oracle",
+          "method": "hybrid",
+          "ids": [
+            "m65",
+            "m21",
+            "m66",
+            "m69",
+            "m67",
+            "m23",
+            "m70",
+            "m07",
+            "m22",
+            "m35"
+          ],
+          "ndcg_at_5": 0.9504088699980561,
+          "ndcg_at_10": 0.9645989401335465,
+          "recall_at_10": 0.875
+        },
+        {
+          "query": "q7",
+          "system": "oracle",
+          "method": "hybrid_rerank",
+          "ids": [
+            "m66",
+            "m65",
+            "m21",
+            "m70",
+            "m69",
+            "m35",
+            "m23",
+            "m22",
+            "m67",
+            "m07"
+          ],
+          "ndcg_at_5": 0.9554550451015821,
+          "ndcg_at_10": 0.9663825098421809,
+          "recall_at_10": 0.875
+        },
+        {
+          "query": "q7",
+          "system": "postgres",
+          "method": "vector",
+          "ids": [
+            "m65",
+            "m66",
+            "m70",
+            "m21",
+            "m69",
+            "m67",
+            "m63",
+            "m62",
+            "m59",
+            "m23"
+          ],
+          "ndcg_at_5": 0.939490267096745,
+          "ndcg_at_10": 0.9109424905197098,
+          "recall_at_10": 0.75
+        },
+        {
+          "query": "q7",
+          "system": "postgres",
+          "method": "lexical",
+          "ids": [
+            "m21",
+            "m65",
+            "m22",
+            "m66",
+            "m69",
+            "m70",
+            "m23",
+            "m67",
+            "m07",
+            "m35"
+          ],
+          "ndcg_at_5": 0.939490267096745,
+          "ndcg_at_10": 0.9605269523092784,
+          "recall_at_10": 0.875
+        },
+        {
+          "query": "q7",
+          "system": "postgres",
+          "method": "hybrid",
+          "ids": [
+            "m65",
+            "m21",
+            "m66",
+            "m70",
+            "m69",
+            "m67",
+            "m23",
+            "m22",
+            "m63",
+            "m62"
+          ],
+          "ndcg_at_5": 0.9554550451015821,
+          "ndcg_at_10": 0.9750552070016529,
+          "recall_at_10": 0.875
+        },
+        {
+          "query": "q7",
+          "system": "postgres",
+          "method": "hybrid_rerank",
+          "ids": [
+            "m66",
+            "m65",
+            "m21",
+            "m70",
+            "m69",
+            "m23",
+            "m22",
+            "m67",
+            "m63",
+            "m62"
+          ],
+          "ndcg_at_5": 0.9554550451015821,
+          "ndcg_at_10": 0.9714599169648428,
+          "recall_at_10": 0.875
+        },
+        {
+          "query": "q8",
+          "system": "oracle",
+          "method": "vector",
+          "ids": [
+            "m71",
+            "m24",
+            "m72",
+            "m73",
+            "m25",
+            "m76",
+            "m26",
+            "m74",
+            "m75",
+            "m06"
+          ],
+          "ndcg_at_5": 0.9918887654809805,
+          "ndcg_at_10": 0.9918887654809805,
+          "recall_at_10": 1.0
+        },
+        {
+          "query": "q8",
+          "system": "oracle",
+          "method": "lexical",
+          "ids": [
+            "m24",
+            "m71",
+            "m72",
+            "m75",
+            "m25",
+            "m26",
+            "m73",
+            "m74",
+            "m76"
+          ],
+          "ndcg_at_5": 0.9918887654809805,
+          "ndcg_at_10": 0.9918887654809805,
+          "recall_at_10": 1.0
+        },
+        {
+          "query": "q8",
+          "system": "oracle",
+          "method": "hybrid",
+          "ids": [
+            "m24",
+            "m71",
+            "m72",
+            "m25",
+            "m73",
+            "m75",
+            "m26",
+            "m76",
+            "m74",
+            "m06"
+          ],
+          "ndcg_at_5": 1.0,
+          "ndcg_at_10": 1.0,
+          "recall_at_10": 1.0
+        },
+        {
+          "query": "q8",
+          "system": "oracle",
+          "method": "hybrid_rerank",
+          "ids": [
+            "m24",
+            "m71",
+            "m72",
+            "m25",
+            "m74",
+            "m73",
+            "m26",
+            "m75",
+            "m76",
+            "m06"
+          ],
+          "ndcg_at_5": 1.0,
+          "ndcg_at_10": 1.0,
+          "recall_at_10": 1.0
+        },
+        {
+          "query": "q8",
+          "system": "postgres",
+          "method": "vector",
+          "ids": [
+            "m71",
+            "m24",
+            "m72",
+            "m73",
+            "m25",
+            "m76",
+            "m26",
+            "m74",
+            "m75",
+            "m06"
+          ],
+          "ndcg_at_5": 0.9918887654809805,
+          "ndcg_at_10": 0.9918887654809805,
+          "recall_at_10": 1.0
+        },
+        {
+          "query": "q8",
+          "system": "postgres",
+          "method": "lexical",
+          "ids": [
+            "m24",
+            "m71",
+            "m25",
+            "m72",
+            "m75",
+            "m73",
+            "m26",
+            "m74",
+            "m76"
+          ],
+          "ndcg_at_5": 0.9828921171931015,
+          "ndcg_at_10": 0.9828921171931015,
+          "recall_at_10": 1.0
+        },
+        {
+          "query": "q8",
+          "system": "postgres",
+          "method": "hybrid",
+          "ids": [
+            "m24",
+            "m71",
+            "m72",
+            "m25",
+            "m73",
+            "m75",
+            "m26",
+            "m76",
+            "m74",
+            "m06"
+          ],
+          "ndcg_at_5": 1.0,
+          "ndcg_at_10": 1.0,
+          "recall_at_10": 1.0
+        },
+        {
+          "query": "q8",
+          "system": "postgres",
+          "method": "hybrid_rerank",
+          "ids": [
+            "m24",
+            "m71",
+            "m72",
+            "m25",
+            "m74",
+            "m73",
+            "m26",
+            "m75",
+            "m76",
+            "m06"
+          ],
+          "ndcg_at_5": 1.0,
+          "ndcg_at_10": 1.0,
+          "recall_at_10": 1.0
+        }
+      ],
+      "interpretation": "The depth-eight and depth-ten evaluations use the same 100 memories, eight questions, complete qrels, models, filters, and lexical queries. Editorial relevance judgments are fixed for this run. No held-out set or independent validation."
+    },
+    "raw_query": {
+      "sql": "SELECT id FROM PG_ORACLE_MEMORY\n        WHERE tenant_id=:tenant AND active=1\n        ORDER BY VECTOR_DISTANCE(embedding,\n          VECTOR_EMBEDDING(ALL_MINILM_L12_V2 USING :query_text AS DATA),COSINE),id\n        FETCH FIRST 10 ROWS ONLY",
+      "ids": [
+        "m01",
+        "m27",
+        "m29",
+        "m32",
+        "m02",
+        "m30",
+        "m33",
+        "m03",
+        "m31",
+        "m34"
+      ]
+    },
+    "oracle_text": {
+      "MANUAL": {
+        "near_sql": "SELECT id,content,SCORE(1) FROM PG_ORACLE_TEXT_MANUAL WHERE CONTAINS(content,'NEAR((connection, pooling), 5)',1)>0 ORDER BY SCORE(1) DESC,id",
+        "near_rows": [
+          [
+            "adjacent",
+            "connection pooling reduces session setup costs.",
+            14
+          ],
+          [
+            "nearby",
+            "connection reuse makes pooling efficient.",
+            14
+          ]
+        ],
+        "and_ids": [
+          "adjacent",
+          "far",
+          "nearby"
+        ],
+        "after_commit": 0,
+        "after_sync": 3
+      },
+      "ON COMMIT": {
+        "near_sql": "SELECT id,content,SCORE(1) FROM PG_ORACLE_TEXT_COMMIT WHERE CONTAINS(content,'NEAR((connection, pooling), 5)',1)>0 ORDER BY SCORE(1) DESC,id",
+        "near_rows": [
+          [
+            "adjacent",
+            "connection pooling reduces session setup costs.",
+            14
+          ],
+          [
+            "nearby",
+            "connection reuse makes pooling efficient.",
+            14
+          ]
+        ],
+        "and_ids": [
+          "adjacent",
+          "far",
+          "nearby"
+        ],
+        "after_commit": 3,
+        "after_sync": 3
+      }
+    }
+  },
+  "deep_data_security": {
+    "oracle": "23.26.3.0.0",
+    "authentication": "Locally managed DDS end users, direct password logon",
+    "scope": "Native data grants: row filtering and per-row sensitive-column masking. No IAM/JWT or pooled application identity test.",
+    "table": "ORACLEDEMO.PG_ORACLE_DDS_M",
+    "ddl": [
+      "CREATE DATA GRANT ORACLEDEMO.PG_ORACLE_DDS_G1 AS SELECT (ALL COLUMNS EXCEPT payment_amount) ON ORACLEDEMO.PG_ORACLE_DDS_M WHERE tenant_id='acme' TO PG_ORACLE_DDS_SR",
+      "CREATE DATA GRANT ORACLEDEMO.PG_ORACLE_DDS_G2 AS SELECT ON ORACLEDEMO.PG_ORACLE_DDS_M WHERE tenant_id='acme' AND id=1 TO PG_ORACLE_DDS_SR",
+      "CREATE DATA GRANT ORACLEDEMO.PG_ORACLE_DDS_G3 AS SELECT ON ORACLEDEMO.PG_ORACLE_DDS_M WHERE tenant_id='acme' TO PG_ORACLE_DDS_FR"
+    ],
+    "observations": {
+      "support": {
+        "identity": "PG_ORACLE_DDS_SUP",
+        "sql": "SELECT id,tenant_id,content,payment_amount FROM ORACLEDEMO.PG_ORACLE_DDS_M ORDER BY id",
+        "rows": [
+          [
+            1,
+            "acme",
+            "Support-owned billing case",
+            125
+          ],
+          [
+            2,
+            "acme",
+            "Finance-owned billing case",
+            null
+          ]
+        ]
+      },
+      "finance": {
+        "identity": "PG_ORACLE_DDS_FIN",
+        "sql": "SELECT id,tenant_id,content,payment_amount FROM ORACLEDEMO.PG_ORACLE_DDS_M ORDER BY id",
+        "rows": [
+          [
+            1,
+            "acme",
+            "Support-owned billing case",
+            125
+          ],
+          [
+            2,
+            "acme",
+            "Finance-owned billing case",
+            950
+          ]
+        ]
+      }
+    },
+    "status": "passed"
+  },
+  "finished_at": "2026-11-06T22:27:05.176678+00:00",
+  "passed_checks": 127,
+  "failed_checks": 0
+}

@@ -1,0 +1,3239 @@
+{
+  "version": "synthetic-100-qrels-v1",
+  "scope": "Current Acme memories; tenant=acme and active=1. Out-of-scope records always have grade 0.",
+  "rubric": {
+    "3": "Directly answers the question or supplies an explicit actionable part of its answer for the correct entity and situation.",
+    "2": "Supplies substantive supporting evidence or a partial answer, such as an approval step without the approver or exclusion of a plausible endpoint.",
+    "1": "Supplies a useful qualification or execution prerequisite without answering the question. A shared word, entity, or broad topic alone is insufficient.",
+    "0": "Does not help answer or act on the question, concerns a different entity/situation, or fails the tenant/lifecycle filter."
+  },
+  "assessment": "Editorial judgments specified from the full question and memory texts. All 800 pairs are explicitly judged. These are not independent human labels or a held-out evaluation.",
+  "query_intents": {
+    "q1": "the identity or authorization process of Cedar's current production release approver",
+    "q2": "the cause or recovery procedure for checkout incident AX417",
+    "q3": "the deletion timing or deletion dependency of customer conversations and their summaries",
+    "q4": "Mina's communication channel or format for routine project updates",
+    "q5": "the approval boundary or execution prerequisites for a 750-dollar customer refund",
+    "q6": "the response or retry precautions after an API rate limit",
+    "q7": "live API routing or distinctions between production and other regional endpoints",
+    "q8": "the cause or recovery procedure for the Atlas ingestion pause"
+  },
+  "judgments": {
+    "q1": {
+      "m01": {
+        "grade": 3,
+        "reason": "Names Priya and requires her written approval for production rollout."
+      },
+      "m02": {
+        "grade": 2,
+        "reason": "Describes the Cedar release-approval step, but does not identify the approver."
+      },
+      "m03": {
+        "grade": 0,
+        "reason": "Names Maple's approver, not Cedar's."
+      },
+      "m04": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "m05": {
+        "grade": 0,
+        "reason": "Provides no evidence about the identity or authorization process of Cedar's current production release approver."
+      },
+      "m06": {
+        "grade": 0,
+        "reason": "Provides no evidence about the identity or authorization process of Cedar's current production release approver."
+      },
+      "m07": {
+        "grade": 0,
+        "reason": "Provides no evidence about the identity or authorization process of Cedar's current production release approver."
+      },
+      "m08": {
+        "grade": 0,
+        "reason": "Provides no evidence about the identity or authorization process of Cedar's current production release approver."
+      },
+      "m09": {
+        "grade": 0,
+        "reason": "Provides no evidence about the identity or authorization process of Cedar's current production release approver."
+      },
+      "m10": {
+        "grade": 0,
+        "reason": "Provides no evidence about the identity or authorization process of Cedar's current production release approver."
+      },
+      "m11": {
+        "grade": 0,
+        "reason": "Provides no evidence about the identity or authorization process of Cedar's current production release approver."
+      },
+      "m12": {
+        "grade": 0,
+        "reason": "Provides no evidence about the identity or authorization process of Cedar's current production release approver."
+      },
+      "m13": {
+        "grade": 0,
+        "reason": "Provides no evidence about the identity or authorization process of Cedar's current production release approver."
+      },
+      "m14": {
+        "grade": 0,
+        "reason": "Provides no evidence about the identity or authorization process of Cedar's current production release approver."
+      },
+      "m15": {
+        "grade": 0,
+        "reason": "Provides no evidence about the identity or authorization process of Cedar's current production release approver."
+      },
+      "m16": {
+        "grade": 0,
+        "reason": "Provides no evidence about the identity or authorization process of Cedar's current production release approver."
+      },
+      "m17": {
+        "grade": 0,
+        "reason": "Provides no evidence about the identity or authorization process of Cedar's current production release approver."
+      },
+      "m18": {
+        "grade": 0,
+        "reason": "Provides no evidence about the identity or authorization process of Cedar's current production release approver."
+      },
+      "m19": {
+        "grade": 0,
+        "reason": "Provides no evidence about the identity or authorization process of Cedar's current production release approver."
+      },
+      "m20": {
+        "grade": 0,
+        "reason": "Provides no evidence about the identity or authorization process of Cedar's current production release approver."
+      },
+      "m21": {
+        "grade": 0,
+        "reason": "Provides no evidence about the identity or authorization process of Cedar's current production release approver."
+      },
+      "m22": {
+        "grade": 0,
+        "reason": "Provides no evidence about the identity or authorization process of Cedar's current production release approver."
+      },
+      "m23": {
+        "grade": 0,
+        "reason": "Provides no evidence about the identity or authorization process of Cedar's current production release approver."
+      },
+      "m24": {
+        "grade": 0,
+        "reason": "Provides no evidence about the identity or authorization process of Cedar's current production release approver."
+      },
+      "m25": {
+        "grade": 0,
+        "reason": "Provides no evidence about the identity or authorization process of Cedar's current production release approver."
+      },
+      "m26": {
+        "grade": 0,
+        "reason": "Provides no evidence about the identity or authorization process of Cedar's current production release approver."
+      },
+      "m27": {
+        "grade": 3,
+        "reason": "Explicitly names Priya as the current production approver; Marco is historical."
+      },
+      "m28": {
+        "grade": 0,
+        "reason": "Provides no evidence about the identity or authorization process of Cedar's current production release approver."
+      },
+      "xm01": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xm02": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xm03": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xm04": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "m29": {
+        "grade": 3,
+        "reason": "Requires Priya's written sign-off on the production rollout ticket."
+      },
+      "m30": {
+        "grade": 3,
+        "reason": "Directs the agent to contact Priya and hold the rollout until she authorizes it."
+      },
+      "m31": {
+        "grade": 0,
+        "reason": "Snapshot scheduling does not establish release approval."
+      },
+      "m32": {
+        "grade": 0,
+        "reason": "Discusses approval permissions for Maple, not who approves Cedar."
+      },
+      "m33": {
+        "grade": 0,
+        "reason": "Artifact signing and retention do not identify or authorize the release approver."
+      },
+      "m34": {
+        "grade": 0,
+        "reason": "Dashboard colors do not establish release approval."
+      },
+      "m35": {
+        "grade": 0,
+        "reason": "Provides no evidence about the identity or authorization process of Cedar's current production release approver."
+      },
+      "m36": {
+        "grade": 0,
+        "reason": "Provides no evidence about the identity or authorization process of Cedar's current production release approver."
+      },
+      "m37": {
+        "grade": 0,
+        "reason": "Provides no evidence about the identity or authorization process of Cedar's current production release approver."
+      },
+      "m38": {
+        "grade": 0,
+        "reason": "Provides no evidence about the identity or authorization process of Cedar's current production release approver."
+      },
+      "m39": {
+        "grade": 0,
+        "reason": "Provides no evidence about the identity or authorization process of Cedar's current production release approver."
+      },
+      "m40": {
+        "grade": 0,
+        "reason": "Provides no evidence about the identity or authorization process of Cedar's current production release approver."
+      },
+      "m41": {
+        "grade": 0,
+        "reason": "Provides no evidence about the identity or authorization process of Cedar's current production release approver."
+      },
+      "m42": {
+        "grade": 0,
+        "reason": "Provides no evidence about the identity or authorization process of Cedar's current production release approver."
+      },
+      "m43": {
+        "grade": 0,
+        "reason": "Provides no evidence about the identity or authorization process of Cedar's current production release approver."
+      },
+      "m44": {
+        "grade": 0,
+        "reason": "Provides no evidence about the identity or authorization process of Cedar's current production release approver."
+      },
+      "m45": {
+        "grade": 0,
+        "reason": "Provides no evidence about the identity or authorization process of Cedar's current production release approver."
+      },
+      "m46": {
+        "grade": 0,
+        "reason": "Provides no evidence about the identity or authorization process of Cedar's current production release approver."
+      },
+      "m47": {
+        "grade": 0,
+        "reason": "Provides no evidence about the identity or authorization process of Cedar's current production release approver."
+      },
+      "m48": {
+        "grade": 0,
+        "reason": "Provides no evidence about the identity or authorization process of Cedar's current production release approver."
+      },
+      "m49": {
+        "grade": 0,
+        "reason": "Provides no evidence about the identity or authorization process of Cedar's current production release approver."
+      },
+      "m50": {
+        "grade": 0,
+        "reason": "Provides no evidence about the identity or authorization process of Cedar's current production release approver."
+      },
+      "m51": {
+        "grade": 0,
+        "reason": "Provides no evidence about the identity or authorization process of Cedar's current production release approver."
+      },
+      "m52": {
+        "grade": 0,
+        "reason": "Provides no evidence about the identity or authorization process of Cedar's current production release approver."
+      },
+      "m53": {
+        "grade": 0,
+        "reason": "Provides no evidence about the identity or authorization process of Cedar's current production release approver."
+      },
+      "m54": {
+        "grade": 0,
+        "reason": "Provides no evidence about the identity or authorization process of Cedar's current production release approver."
+      },
+      "m55": {
+        "grade": 0,
+        "reason": "Provides no evidence about the identity or authorization process of Cedar's current production release approver."
+      },
+      "m56": {
+        "grade": 0,
+        "reason": "Provides no evidence about the identity or authorization process of Cedar's current production release approver."
+      },
+      "m57": {
+        "grade": 0,
+        "reason": "Provides no evidence about the identity or authorization process of Cedar's current production release approver."
+      },
+      "m58": {
+        "grade": 0,
+        "reason": "Provides no evidence about the identity or authorization process of Cedar's current production release approver."
+      },
+      "m59": {
+        "grade": 0,
+        "reason": "Provides no evidence about the identity or authorization process of Cedar's current production release approver."
+      },
+      "m60": {
+        "grade": 0,
+        "reason": "Provides no evidence about the identity or authorization process of Cedar's current production release approver."
+      },
+      "m61": {
+        "grade": 0,
+        "reason": "Provides no evidence about the identity or authorization process of Cedar's current production release approver."
+      },
+      "m62": {
+        "grade": 0,
+        "reason": "Provides no evidence about the identity or authorization process of Cedar's current production release approver."
+      },
+      "m63": {
+        "grade": 0,
+        "reason": "Provides no evidence about the identity or authorization process of Cedar's current production release approver."
+      },
+      "m64": {
+        "grade": 0,
+        "reason": "Provides no evidence about the identity or authorization process of Cedar's current production release approver."
+      },
+      "m65": {
+        "grade": 0,
+        "reason": "Provides no evidence about the identity or authorization process of Cedar's current production release approver."
+      },
+      "m66": {
+        "grade": 0,
+        "reason": "Provides no evidence about the identity or authorization process of Cedar's current production release approver."
+      },
+      "m67": {
+        "grade": 0,
+        "reason": "Provides no evidence about the identity or authorization process of Cedar's current production release approver."
+      },
+      "m68": {
+        "grade": 0,
+        "reason": "Provides no evidence about the identity or authorization process of Cedar's current production release approver."
+      },
+      "m69": {
+        "grade": 0,
+        "reason": "Provides no evidence about the identity or authorization process of Cedar's current production release approver."
+      },
+      "m70": {
+        "grade": 0,
+        "reason": "Provides no evidence about the identity or authorization process of Cedar's current production release approver."
+      },
+      "m71": {
+        "grade": 0,
+        "reason": "Provides no evidence about the identity or authorization process of Cedar's current production release approver."
+      },
+      "m72": {
+        "grade": 0,
+        "reason": "Provides no evidence about the identity or authorization process of Cedar's current production release approver."
+      },
+      "m73": {
+        "grade": 0,
+        "reason": "Provides no evidence about the identity or authorization process of Cedar's current production release approver."
+      },
+      "m74": {
+        "grade": 0,
+        "reason": "Provides no evidence about the identity or authorization process of Cedar's current production release approver."
+      },
+      "m75": {
+        "grade": 0,
+        "reason": "Provides no evidence about the identity or authorization process of Cedar's current production release approver."
+      },
+      "m76": {
+        "grade": 0,
+        "reason": "Provides no evidence about the identity or authorization process of Cedar's current production release approver."
+      },
+      "m77": {
+        "grade": 0,
+        "reason": "Provides no evidence about the identity or authorization process of Cedar's current production release approver."
+      },
+      "m78": {
+        "grade": 0,
+        "reason": "Provides no evidence about the identity or authorization process of Cedar's current production release approver."
+      },
+      "m79": {
+        "grade": 0,
+        "reason": "Provides no evidence about the identity or authorization process of Cedar's current production release approver."
+      },
+      "m80": {
+        "grade": 0,
+        "reason": "Provides no evidence about the identity or authorization process of Cedar's current production release approver."
+      },
+      "m81": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "m82": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "m83": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "m84": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "m85": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "m86": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "m87": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "m88": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "xq1": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xq2": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xq3": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xq4": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xq5": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xq6": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xq7": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xq8": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      }
+    },
+    "q2": {
+      "m01": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for checkout incident AX417."
+      },
+      "m02": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for checkout incident AX417."
+      },
+      "m03": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for checkout incident AX417."
+      },
+      "m04": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "m05": {
+        "grade": 3,
+        "reason": "Identifies AX417's stale DNS cause and gives the cache-flush and retry fix."
+      },
+      "m06": {
+        "grade": 0,
+        "reason": "AX471 is a different incident with a different cause."
+      },
+      "m07": {
+        "grade": 2,
+        "reason": "Explains the applicable checkout DNS-cache recovery action without identifying AX417."
+      },
+      "m08": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for checkout incident AX417."
+      },
+      "m09": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for checkout incident AX417."
+      },
+      "m10": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for checkout incident AX417."
+      },
+      "m11": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for checkout incident AX417."
+      },
+      "m12": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for checkout incident AX417."
+      },
+      "m13": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for checkout incident AX417."
+      },
+      "m14": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for checkout incident AX417."
+      },
+      "m15": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for checkout incident AX417."
+      },
+      "m16": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for checkout incident AX417."
+      },
+      "m17": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for checkout incident AX417."
+      },
+      "m18": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for checkout incident AX417."
+      },
+      "m19": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for checkout incident AX417."
+      },
+      "m20": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for checkout incident AX417."
+      },
+      "m21": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for checkout incident AX417."
+      },
+      "m22": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for checkout incident AX417."
+      },
+      "m23": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for checkout incident AX417."
+      },
+      "m24": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for checkout incident AX417."
+      },
+      "m25": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for checkout incident AX417."
+      },
+      "m26": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for checkout incident AX417."
+      },
+      "m27": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for checkout incident AX417."
+      },
+      "m28": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for checkout incident AX417."
+      },
+      "xm01": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xm02": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xm03": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xm04": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "m29": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for checkout incident AX417."
+      },
+      "m30": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for checkout incident AX417."
+      },
+      "m31": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for checkout incident AX417."
+      },
+      "m32": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for checkout incident AX417."
+      },
+      "m33": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for checkout incident AX417."
+      },
+      "m34": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for checkout incident AX417."
+      },
+      "m35": {
+        "grade": 3,
+        "reason": "Gives the AX417 recovery sequence: flush DNS, confirm the address, and retry."
+      },
+      "m36": {
+        "grade": 3,
+        "reason": "Identifies AX417's cached old DNS answer and the invalidation that restored service."
+      },
+      "m37": {
+        "grade": 0,
+        "reason": "AX418 is a different incident; its cookie fix does not repair AX417."
+      },
+      "m38": {
+        "grade": 0,
+        "reason": "AX471 has a different recovery procedure; this is not evidence for repairing AX417."
+      },
+      "m39": {
+        "grade": 0,
+        "reason": "Postal-code validation does not diagnose or repair AX417."
+      },
+      "m40": {
+        "grade": 0,
+        "reason": "Mentions AX417 only as a chart-export option and gives no recovery evidence."
+      },
+      "m41": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for checkout incident AX417."
+      },
+      "m42": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for checkout incident AX417."
+      },
+      "m43": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for checkout incident AX417."
+      },
+      "m44": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for checkout incident AX417."
+      },
+      "m45": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for checkout incident AX417."
+      },
+      "m46": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for checkout incident AX417."
+      },
+      "m47": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for checkout incident AX417."
+      },
+      "m48": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for checkout incident AX417."
+      },
+      "m49": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for checkout incident AX417."
+      },
+      "m50": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for checkout incident AX417."
+      },
+      "m51": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for checkout incident AX417."
+      },
+      "m52": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for checkout incident AX417."
+      },
+      "m53": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for checkout incident AX417."
+      },
+      "m54": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for checkout incident AX417."
+      },
+      "m55": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for checkout incident AX417."
+      },
+      "m56": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for checkout incident AX417."
+      },
+      "m57": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for checkout incident AX417."
+      },
+      "m58": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for checkout incident AX417."
+      },
+      "m59": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for checkout incident AX417."
+      },
+      "m60": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for checkout incident AX417."
+      },
+      "m61": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for checkout incident AX417."
+      },
+      "m62": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for checkout incident AX417."
+      },
+      "m63": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for checkout incident AX417."
+      },
+      "m64": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for checkout incident AX417."
+      },
+      "m65": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for checkout incident AX417."
+      },
+      "m66": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for checkout incident AX417."
+      },
+      "m67": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for checkout incident AX417."
+      },
+      "m68": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for checkout incident AX417."
+      },
+      "m69": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for checkout incident AX417."
+      },
+      "m70": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for checkout incident AX417."
+      },
+      "m71": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for checkout incident AX417."
+      },
+      "m72": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for checkout incident AX417."
+      },
+      "m73": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for checkout incident AX417."
+      },
+      "m74": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for checkout incident AX417."
+      },
+      "m75": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for checkout incident AX417."
+      },
+      "m76": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for checkout incident AX417."
+      },
+      "m77": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for checkout incident AX417."
+      },
+      "m78": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for checkout incident AX417."
+      },
+      "m79": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for checkout incident AX417."
+      },
+      "m80": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for checkout incident AX417."
+      },
+      "m81": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "m82": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "m83": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "m84": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "m85": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "m86": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "m87": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "m88": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "xq1": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xq2": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xq3": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xq4": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xq5": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xq6": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xq7": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xq8": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      }
+    },
+    "q3": {
+      "m01": {
+        "grade": 0,
+        "reason": "Provides no evidence about the deletion timing or deletion dependency of customer conversations and their summaries."
+      },
+      "m02": {
+        "grade": 0,
+        "reason": "Provides no evidence about the deletion timing or deletion dependency of customer conversations and their summaries."
+      },
+      "m03": {
+        "grade": 0,
+        "reason": "Provides no evidence about the deletion timing or deletion dependency of customer conversations and their summaries."
+      },
+      "m04": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "m05": {
+        "grade": 0,
+        "reason": "Provides no evidence about the deletion timing or deletion dependency of customer conversations and their summaries."
+      },
+      "m06": {
+        "grade": 0,
+        "reason": "Provides no evidence about the deletion timing or deletion dependency of customer conversations and their summaries."
+      },
+      "m07": {
+        "grade": 0,
+        "reason": "Provides no evidence about the deletion timing or deletion dependency of customer conversations and their summaries."
+      },
+      "m08": {
+        "grade": 0,
+        "reason": "Invoice retention is a different data policy; this record gives no conversation-deletion deadline."
+      },
+      "m09": {
+        "grade": 3,
+        "reason": "Gives the thirty-day deadline and explicitly includes transcripts and summaries."
+      },
+      "m10": {
+        "grade": 3,
+        "reason": "Specifies when derived summaries must be removed: when their source conversation is deleted."
+      },
+      "m11": {
+        "grade": 0,
+        "reason": "Telemetry retention does not determine conversation or summary deletion."
+      },
+      "m12": {
+        "grade": 0,
+        "reason": "Provides no evidence about the deletion timing or deletion dependency of customer conversations and their summaries."
+      },
+      "m13": {
+        "grade": 0,
+        "reason": "Provides no evidence about the deletion timing or deletion dependency of customer conversations and their summaries."
+      },
+      "m14": {
+        "grade": 0,
+        "reason": "Provides no evidence about the deletion timing or deletion dependency of customer conversations and their summaries."
+      },
+      "m15": {
+        "grade": 0,
+        "reason": "Provides no evidence about the deletion timing or deletion dependency of customer conversations and their summaries."
+      },
+      "m16": {
+        "grade": 0,
+        "reason": "Provides no evidence about the deletion timing or deletion dependency of customer conversations and their summaries."
+      },
+      "m17": {
+        "grade": 0,
+        "reason": "Provides no evidence about the deletion timing or deletion dependency of customer conversations and their summaries."
+      },
+      "m18": {
+        "grade": 0,
+        "reason": "Provides no evidence about the deletion timing or deletion dependency of customer conversations and their summaries."
+      },
+      "m19": {
+        "grade": 0,
+        "reason": "Provides no evidence about the deletion timing or deletion dependency of customer conversations and their summaries."
+      },
+      "m20": {
+        "grade": 0,
+        "reason": "Provides no evidence about the deletion timing or deletion dependency of customer conversations and their summaries."
+      },
+      "m21": {
+        "grade": 0,
+        "reason": "Provides no evidence about the deletion timing or deletion dependency of customer conversations and their summaries."
+      },
+      "m22": {
+        "grade": 0,
+        "reason": "Provides no evidence about the deletion timing or deletion dependency of customer conversations and their summaries."
+      },
+      "m23": {
+        "grade": 0,
+        "reason": "Provides no evidence about the deletion timing or deletion dependency of customer conversations and their summaries."
+      },
+      "m24": {
+        "grade": 0,
+        "reason": "Provides no evidence about the deletion timing or deletion dependency of customer conversations and their summaries."
+      },
+      "m25": {
+        "grade": 0,
+        "reason": "Provides no evidence about the deletion timing or deletion dependency of customer conversations and their summaries."
+      },
+      "m26": {
+        "grade": 0,
+        "reason": "Provides no evidence about the deletion timing or deletion dependency of customer conversations and their summaries."
+      },
+      "m27": {
+        "grade": 0,
+        "reason": "Provides no evidence about the deletion timing or deletion dependency of customer conversations and their summaries."
+      },
+      "m28": {
+        "grade": 2,
+        "reason": "Provides the early-erasure exception to the thirty-day period, without explicitly mentioning summaries."
+      },
+      "xm01": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xm02": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xm03": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xm04": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "m29": {
+        "grade": 0,
+        "reason": "Provides no evidence about the deletion timing or deletion dependency of customer conversations and their summaries."
+      },
+      "m30": {
+        "grade": 0,
+        "reason": "Provides no evidence about the deletion timing or deletion dependency of customer conversations and their summaries."
+      },
+      "m31": {
+        "grade": 0,
+        "reason": "Provides no evidence about the deletion timing or deletion dependency of customer conversations and their summaries."
+      },
+      "m32": {
+        "grade": 0,
+        "reason": "Provides no evidence about the deletion timing or deletion dependency of customer conversations and their summaries."
+      },
+      "m33": {
+        "grade": 0,
+        "reason": "Provides no evidence about the deletion timing or deletion dependency of customer conversations and their summaries."
+      },
+      "m34": {
+        "grade": 0,
+        "reason": "Provides no evidence about the deletion timing or deletion dependency of customer conversations and their summaries."
+      },
+      "m35": {
+        "grade": 0,
+        "reason": "Provides no evidence about the deletion timing or deletion dependency of customer conversations and their summaries."
+      },
+      "m36": {
+        "grade": 0,
+        "reason": "Provides no evidence about the deletion timing or deletion dependency of customer conversations and their summaries."
+      },
+      "m37": {
+        "grade": 0,
+        "reason": "Provides no evidence about the deletion timing or deletion dependency of customer conversations and their summaries."
+      },
+      "m38": {
+        "grade": 0,
+        "reason": "Provides no evidence about the deletion timing or deletion dependency of customer conversations and their summaries."
+      },
+      "m39": {
+        "grade": 0,
+        "reason": "Provides no evidence about the deletion timing or deletion dependency of customer conversations and their summaries."
+      },
+      "m40": {
+        "grade": 0,
+        "reason": "Provides no evidence about the deletion timing or deletion dependency of customer conversations and their summaries."
+      },
+      "m41": {
+        "grade": 3,
+        "reason": "Gives the thirty-day trigger measured from closure and includes transcripts and summaries."
+      },
+      "m42": {
+        "grade": 3,
+        "reason": "States that an approved early-erasure request triggers deletion of both conversation and summaries."
+      },
+      "m43": {
+        "grade": 0,
+        "reason": "Training-video retention applies to different data."
+      },
+      "m44": {
+        "grade": 0,
+        "reason": "Invoice retention applies to different data."
+      },
+      "m45": {
+        "grade": 0,
+        "reason": "FAQ revision timing does not determine conversation deletion."
+      },
+      "m46": {
+        "grade": 0,
+        "reason": "Transcript export format gives no deletion timing or dependency."
+      },
+      "m47": {
+        "grade": 0,
+        "reason": "Provides no evidence about the deletion timing or deletion dependency of customer conversations and their summaries."
+      },
+      "m48": {
+        "grade": 0,
+        "reason": "Provides no evidence about the deletion timing or deletion dependency of customer conversations and their summaries."
+      },
+      "m49": {
+        "grade": 0,
+        "reason": "Provides no evidence about the deletion timing or deletion dependency of customer conversations and their summaries."
+      },
+      "m50": {
+        "grade": 0,
+        "reason": "Provides no evidence about the deletion timing or deletion dependency of customer conversations and their summaries."
+      },
+      "m51": {
+        "grade": 0,
+        "reason": "Provides no evidence about the deletion timing or deletion dependency of customer conversations and their summaries."
+      },
+      "m52": {
+        "grade": 0,
+        "reason": "Provides no evidence about the deletion timing or deletion dependency of customer conversations and their summaries."
+      },
+      "m53": {
+        "grade": 0,
+        "reason": "Provides no evidence about the deletion timing or deletion dependency of customer conversations and their summaries."
+      },
+      "m54": {
+        "grade": 0,
+        "reason": "Provides no evidence about the deletion timing or deletion dependency of customer conversations and their summaries."
+      },
+      "m55": {
+        "grade": 0,
+        "reason": "Provides no evidence about the deletion timing or deletion dependency of customer conversations and their summaries."
+      },
+      "m56": {
+        "grade": 0,
+        "reason": "Provides no evidence about the deletion timing or deletion dependency of customer conversations and their summaries."
+      },
+      "m57": {
+        "grade": 0,
+        "reason": "Provides no evidence about the deletion timing or deletion dependency of customer conversations and their summaries."
+      },
+      "m58": {
+        "grade": 0,
+        "reason": "Provides no evidence about the deletion timing or deletion dependency of customer conversations and their summaries."
+      },
+      "m59": {
+        "grade": 0,
+        "reason": "Provides no evidence about the deletion timing or deletion dependency of customer conversations and their summaries."
+      },
+      "m60": {
+        "grade": 0,
+        "reason": "Provides no evidence about the deletion timing or deletion dependency of customer conversations and their summaries."
+      },
+      "m61": {
+        "grade": 0,
+        "reason": "Provides no evidence about the deletion timing or deletion dependency of customer conversations and their summaries."
+      },
+      "m62": {
+        "grade": 0,
+        "reason": "Provides no evidence about the deletion timing or deletion dependency of customer conversations and their summaries."
+      },
+      "m63": {
+        "grade": 0,
+        "reason": "Provides no evidence about the deletion timing or deletion dependency of customer conversations and their summaries."
+      },
+      "m64": {
+        "grade": 0,
+        "reason": "Provides no evidence about the deletion timing or deletion dependency of customer conversations and their summaries."
+      },
+      "m65": {
+        "grade": 0,
+        "reason": "Provides no evidence about the deletion timing or deletion dependency of customer conversations and their summaries."
+      },
+      "m66": {
+        "grade": 0,
+        "reason": "Provides no evidence about the deletion timing or deletion dependency of customer conversations and their summaries."
+      },
+      "m67": {
+        "grade": 0,
+        "reason": "Provides no evidence about the deletion timing or deletion dependency of customer conversations and their summaries."
+      },
+      "m68": {
+        "grade": 0,
+        "reason": "Provides no evidence about the deletion timing or deletion dependency of customer conversations and their summaries."
+      },
+      "m69": {
+        "grade": 0,
+        "reason": "Provides no evidence about the deletion timing or deletion dependency of customer conversations and their summaries."
+      },
+      "m70": {
+        "grade": 0,
+        "reason": "Provides no evidence about the deletion timing or deletion dependency of customer conversations and their summaries."
+      },
+      "m71": {
+        "grade": 0,
+        "reason": "Provides no evidence about the deletion timing or deletion dependency of customer conversations and their summaries."
+      },
+      "m72": {
+        "grade": 0,
+        "reason": "Provides no evidence about the deletion timing or deletion dependency of customer conversations and their summaries."
+      },
+      "m73": {
+        "grade": 0,
+        "reason": "Provides no evidence about the deletion timing or deletion dependency of customer conversations and their summaries."
+      },
+      "m74": {
+        "grade": 0,
+        "reason": "Provides no evidence about the deletion timing or deletion dependency of customer conversations and their summaries."
+      },
+      "m75": {
+        "grade": 0,
+        "reason": "Provides no evidence about the deletion timing or deletion dependency of customer conversations and their summaries."
+      },
+      "m76": {
+        "grade": 0,
+        "reason": "Provides no evidence about the deletion timing or deletion dependency of customer conversations and their summaries."
+      },
+      "m77": {
+        "grade": 0,
+        "reason": "Provides no evidence about the deletion timing or deletion dependency of customer conversations and their summaries."
+      },
+      "m78": {
+        "grade": 0,
+        "reason": "Provides no evidence about the deletion timing or deletion dependency of customer conversations and their summaries."
+      },
+      "m79": {
+        "grade": 0,
+        "reason": "Provides no evidence about the deletion timing or deletion dependency of customer conversations and their summaries."
+      },
+      "m80": {
+        "grade": 0,
+        "reason": "Provides no evidence about the deletion timing or deletion dependency of customer conversations and their summaries."
+      },
+      "m81": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "m82": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "m83": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "m84": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "m85": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "m86": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "m87": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "m88": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "xq1": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xq2": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xq3": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xq4": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xq5": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xq6": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xq7": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xq8": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      }
+    },
+    "q4": {
+      "m01": {
+        "grade": 0,
+        "reason": "Provides no evidence about Mina's communication channel or format for routine project updates."
+      },
+      "m02": {
+        "grade": 0,
+        "reason": "Provides no evidence about Mina's communication channel or format for routine project updates."
+      },
+      "m03": {
+        "grade": 0,
+        "reason": "Provides no evidence about Mina's communication channel or format for routine project updates."
+      },
+      "m04": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "m05": {
+        "grade": 0,
+        "reason": "Provides no evidence about Mina's communication channel or format for routine project updates."
+      },
+      "m06": {
+        "grade": 0,
+        "reason": "Provides no evidence about Mina's communication channel or format for routine project updates."
+      },
+      "m07": {
+        "grade": 0,
+        "reason": "Provides no evidence about Mina's communication channel or format for routine project updates."
+      },
+      "m08": {
+        "grade": 0,
+        "reason": "Provides no evidence about Mina's communication channel or format for routine project updates."
+      },
+      "m09": {
+        "grade": 0,
+        "reason": "Provides no evidence about Mina's communication channel or format for routine project updates."
+      },
+      "m10": {
+        "grade": 0,
+        "reason": "Provides no evidence about Mina's communication channel or format for routine project updates."
+      },
+      "m11": {
+        "grade": 0,
+        "reason": "Provides no evidence about Mina's communication channel or format for routine project updates."
+      },
+      "m12": {
+        "grade": 3,
+        "reason": "Specifies concise email and no meeting invitations for routine updates."
+      },
+      "m13": {
+        "grade": 3,
+        "reason": "Explicitly says routine progress reports go by email; SMS is reserved for urgent outages."
+      },
+      "m14": {
+        "grade": 0,
+        "reason": "Luis is a different person."
+      },
+      "m15": {
+        "grade": 0,
+        "reason": "Provides no evidence about Mina's communication channel or format for routine project updates."
+      },
+      "m16": {
+        "grade": 0,
+        "reason": "Provides no evidence about Mina's communication channel or format for routine project updates."
+      },
+      "m17": {
+        "grade": 0,
+        "reason": "Provides no evidence about Mina's communication channel or format for routine project updates."
+      },
+      "m18": {
+        "grade": 0,
+        "reason": "Provides no evidence about Mina's communication channel or format for routine project updates."
+      },
+      "m19": {
+        "grade": 0,
+        "reason": "Provides no evidence about Mina's communication channel or format for routine project updates."
+      },
+      "m20": {
+        "grade": 0,
+        "reason": "Provides no evidence about Mina's communication channel or format for routine project updates."
+      },
+      "m21": {
+        "grade": 0,
+        "reason": "Provides no evidence about Mina's communication channel or format for routine project updates."
+      },
+      "m22": {
+        "grade": 0,
+        "reason": "Provides no evidence about Mina's communication channel or format for routine project updates."
+      },
+      "m23": {
+        "grade": 0,
+        "reason": "Provides no evidence about Mina's communication channel or format for routine project updates."
+      },
+      "m24": {
+        "grade": 0,
+        "reason": "Provides no evidence about Mina's communication channel or format for routine project updates."
+      },
+      "m25": {
+        "grade": 0,
+        "reason": "Provides no evidence about Mina's communication channel or format for routine project updates."
+      },
+      "m26": {
+        "grade": 0,
+        "reason": "Provides no evidence about Mina's communication channel or format for routine project updates."
+      },
+      "m27": {
+        "grade": 0,
+        "reason": "Provides no evidence about Mina's communication channel or format for routine project updates."
+      },
+      "m28": {
+        "grade": 0,
+        "reason": "Provides no evidence about Mina's communication channel or format for routine project updates."
+      },
+      "xm01": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xm02": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xm03": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xm04": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "m29": {
+        "grade": 0,
+        "reason": "Provides no evidence about Mina's communication channel or format for routine project updates."
+      },
+      "m30": {
+        "grade": 0,
+        "reason": "Provides no evidence about Mina's communication channel or format for routine project updates."
+      },
+      "m31": {
+        "grade": 0,
+        "reason": "Provides no evidence about Mina's communication channel or format for routine project updates."
+      },
+      "m32": {
+        "grade": 0,
+        "reason": "Provides no evidence about Mina's communication channel or format for routine project updates."
+      },
+      "m33": {
+        "grade": 0,
+        "reason": "Provides no evidence about Mina's communication channel or format for routine project updates."
+      },
+      "m34": {
+        "grade": 0,
+        "reason": "Provides no evidence about Mina's communication channel or format for routine project updates."
+      },
+      "m35": {
+        "grade": 0,
+        "reason": "Provides no evidence about Mina's communication channel or format for routine project updates."
+      },
+      "m36": {
+        "grade": 0,
+        "reason": "Provides no evidence about Mina's communication channel or format for routine project updates."
+      },
+      "m37": {
+        "grade": 0,
+        "reason": "Provides no evidence about Mina's communication channel or format for routine project updates."
+      },
+      "m38": {
+        "grade": 0,
+        "reason": "Provides no evidence about Mina's communication channel or format for routine project updates."
+      },
+      "m39": {
+        "grade": 0,
+        "reason": "Provides no evidence about Mina's communication channel or format for routine project updates."
+      },
+      "m40": {
+        "grade": 0,
+        "reason": "Provides no evidence about Mina's communication channel or format for routine project updates."
+      },
+      "m41": {
+        "grade": 0,
+        "reason": "Provides no evidence about Mina's communication channel or format for routine project updates."
+      },
+      "m42": {
+        "grade": 0,
+        "reason": "Provides no evidence about Mina's communication channel or format for routine project updates."
+      },
+      "m43": {
+        "grade": 0,
+        "reason": "Provides no evidence about Mina's communication channel or format for routine project updates."
+      },
+      "m44": {
+        "grade": 0,
+        "reason": "Provides no evidence about Mina's communication channel or format for routine project updates."
+      },
+      "m45": {
+        "grade": 0,
+        "reason": "Provides no evidence about Mina's communication channel or format for routine project updates."
+      },
+      "m46": {
+        "grade": 0,
+        "reason": "Provides no evidence about Mina's communication channel or format for routine project updates."
+      },
+      "m47": {
+        "grade": 3,
+        "reason": "Specifies a short status email and next step, without booking a meeting."
+      },
+      "m48": {
+        "grade": 3,
+        "reason": "Specifies the existing email thread as Mina's channel for routine reports."
+      },
+      "m49": {
+        "grade": 0,
+        "reason": "Nina is explicitly a different person from Mina."
+      },
+      "m50": {
+        "grade": 0,
+        "reason": "Luis is a different person."
+      },
+      "m51": {
+        "grade": 0,
+        "reason": "A time zone and workday start do not specify how Mina wants routine updates sent."
+      },
+      "m52": {
+        "grade": 0,
+        "reason": "Budget ownership and procurement invoices do not specify Mina's update preference."
+      },
+      "m53": {
+        "grade": 0,
+        "reason": "Provides no evidence about Mina's communication channel or format for routine project updates."
+      },
+      "m54": {
+        "grade": 0,
+        "reason": "Provides no evidence about Mina's communication channel or format for routine project updates."
+      },
+      "m55": {
+        "grade": 0,
+        "reason": "Provides no evidence about Mina's communication channel or format for routine project updates."
+      },
+      "m56": {
+        "grade": 0,
+        "reason": "Provides no evidence about Mina's communication channel or format for routine project updates."
+      },
+      "m57": {
+        "grade": 0,
+        "reason": "Provides no evidence about Mina's communication channel or format for routine project updates."
+      },
+      "m58": {
+        "grade": 0,
+        "reason": "Provides no evidence about Mina's communication channel or format for routine project updates."
+      },
+      "m59": {
+        "grade": 0,
+        "reason": "Provides no evidence about Mina's communication channel or format for routine project updates."
+      },
+      "m60": {
+        "grade": 0,
+        "reason": "Provides no evidence about Mina's communication channel or format for routine project updates."
+      },
+      "m61": {
+        "grade": 0,
+        "reason": "Provides no evidence about Mina's communication channel or format for routine project updates."
+      },
+      "m62": {
+        "grade": 0,
+        "reason": "Provides no evidence about Mina's communication channel or format for routine project updates."
+      },
+      "m63": {
+        "grade": 0,
+        "reason": "Provides no evidence about Mina's communication channel or format for routine project updates."
+      },
+      "m64": {
+        "grade": 0,
+        "reason": "Provides no evidence about Mina's communication channel or format for routine project updates."
+      },
+      "m65": {
+        "grade": 0,
+        "reason": "Provides no evidence about Mina's communication channel or format for routine project updates."
+      },
+      "m66": {
+        "grade": 0,
+        "reason": "Provides no evidence about Mina's communication channel or format for routine project updates."
+      },
+      "m67": {
+        "grade": 0,
+        "reason": "Provides no evidence about Mina's communication channel or format for routine project updates."
+      },
+      "m68": {
+        "grade": 0,
+        "reason": "Provides no evidence about Mina's communication channel or format for routine project updates."
+      },
+      "m69": {
+        "grade": 0,
+        "reason": "Provides no evidence about Mina's communication channel or format for routine project updates."
+      },
+      "m70": {
+        "grade": 0,
+        "reason": "Provides no evidence about Mina's communication channel or format for routine project updates."
+      },
+      "m71": {
+        "grade": 0,
+        "reason": "Provides no evidence about Mina's communication channel or format for routine project updates."
+      },
+      "m72": {
+        "grade": 0,
+        "reason": "Provides no evidence about Mina's communication channel or format for routine project updates."
+      },
+      "m73": {
+        "grade": 0,
+        "reason": "Provides no evidence about Mina's communication channel or format for routine project updates."
+      },
+      "m74": {
+        "grade": 0,
+        "reason": "Provides no evidence about Mina's communication channel or format for routine project updates."
+      },
+      "m75": {
+        "grade": 0,
+        "reason": "Provides no evidence about Mina's communication channel or format for routine project updates."
+      },
+      "m76": {
+        "grade": 0,
+        "reason": "Provides no evidence about Mina's communication channel or format for routine project updates."
+      },
+      "m77": {
+        "grade": 0,
+        "reason": "Provides no evidence about Mina's communication channel or format for routine project updates."
+      },
+      "m78": {
+        "grade": 0,
+        "reason": "Provides no evidence about Mina's communication channel or format for routine project updates."
+      },
+      "m79": {
+        "grade": 0,
+        "reason": "Provides no evidence about Mina's communication channel or format for routine project updates."
+      },
+      "m80": {
+        "grade": 0,
+        "reason": "Provides no evidence about Mina's communication channel or format for routine project updates."
+      },
+      "m81": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "m82": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "m83": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "m84": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "m85": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "m86": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "m87": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "m88": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "xq1": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xq2": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xq3": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xq4": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xq5": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xq6": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xq7": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xq8": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      }
+    },
+    "q5": {
+      "m01": {
+        "grade": 0,
+        "reason": "Provides no evidence about the approval boundary or execution prerequisites for a 750-dollar customer refund."
+      },
+      "m02": {
+        "grade": 0,
+        "reason": "Provides no evidence about the approval boundary or execution prerequisites for a 750-dollar customer refund."
+      },
+      "m03": {
+        "grade": 0,
+        "reason": "Provides no evidence about the approval boundary or execution prerequisites for a 750-dollar customer refund."
+      },
+      "m04": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "m05": {
+        "grade": 0,
+        "reason": "Provides no evidence about the approval boundary or execution prerequisites for a 750-dollar customer refund."
+      },
+      "m06": {
+        "grade": 0,
+        "reason": "Provides no evidence about the approval boundary or execution prerequisites for a 750-dollar customer refund."
+      },
+      "m07": {
+        "grade": 0,
+        "reason": "Provides no evidence about the approval boundary or execution prerequisites for a 750-dollar customer refund."
+      },
+      "m08": {
+        "grade": 0,
+        "reason": "Provides no evidence about the approval boundary or execution prerequisites for a 750-dollar customer refund."
+      },
+      "m09": {
+        "grade": 0,
+        "reason": "Provides no evidence about the approval boundary or execution prerequisites for a 750-dollar customer refund."
+      },
+      "m10": {
+        "grade": 0,
+        "reason": "Provides no evidence about the approval boundary or execution prerequisites for a 750-dollar customer refund."
+      },
+      "m11": {
+        "grade": 0,
+        "reason": "Provides no evidence about the approval boundary or execution prerequisites for a 750-dollar customer refund."
+      },
+      "m12": {
+        "grade": 0,
+        "reason": "Provides no evidence about the approval boundary or execution prerequisites for a 750-dollar customer refund."
+      },
+      "m13": {
+        "grade": 0,
+        "reason": "Provides no evidence about the approval boundary or execution prerequisites for a 750-dollar customer refund."
+      },
+      "m14": {
+        "grade": 0,
+        "reason": "Provides no evidence about the approval boundary or execution prerequisites for a 750-dollar customer refund."
+      },
+      "m15": {
+        "grade": 3,
+        "reason": "Requires finance-manager approval above 500 dollars, which includes 750 dollars."
+      },
+      "m16": {
+        "grade": 2,
+        "reason": "Defines support's verified-purchase authority up to 500 dollars, but does not state the above-limit approval path."
+      },
+      "m17": {
+        "grade": 1,
+        "reason": "Adds refund-execution prerequisites, including an idempotency key, but does not answer the approval question."
+      },
+      "m18": {
+        "grade": 0,
+        "reason": "Provides no evidence about the approval boundary or execution prerequisites for a 750-dollar customer refund."
+      },
+      "m19": {
+        "grade": 0,
+        "reason": "Payment-submission safety does not establish customer-refund authorization or refund-specific tool requirements."
+      },
+      "m20": {
+        "grade": 0,
+        "reason": "Provides no evidence about the approval boundary or execution prerequisites for a 750-dollar customer refund."
+      },
+      "m21": {
+        "grade": 0,
+        "reason": "Provides no evidence about the approval boundary or execution prerequisites for a 750-dollar customer refund."
+      },
+      "m22": {
+        "grade": 0,
+        "reason": "Provides no evidence about the approval boundary or execution prerequisites for a 750-dollar customer refund."
+      },
+      "m23": {
+        "grade": 0,
+        "reason": "Provides no evidence about the approval boundary or execution prerequisites for a 750-dollar customer refund."
+      },
+      "m24": {
+        "grade": 0,
+        "reason": "Provides no evidence about the approval boundary or execution prerequisites for a 750-dollar customer refund."
+      },
+      "m25": {
+        "grade": 0,
+        "reason": "Provides no evidence about the approval boundary or execution prerequisites for a 750-dollar customer refund."
+      },
+      "m26": {
+        "grade": 0,
+        "reason": "Provides no evidence about the approval boundary or execution prerequisites for a 750-dollar customer refund."
+      },
+      "m27": {
+        "grade": 0,
+        "reason": "Provides no evidence about the approval boundary or execution prerequisites for a 750-dollar customer refund."
+      },
+      "m28": {
+        "grade": 0,
+        "reason": "Provides no evidence about the approval boundary or execution prerequisites for a 750-dollar customer refund."
+      },
+      "xm01": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xm02": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xm03": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xm04": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "m29": {
+        "grade": 0,
+        "reason": "Provides no evidence about the approval boundary or execution prerequisites for a 750-dollar customer refund."
+      },
+      "m30": {
+        "grade": 0,
+        "reason": "Provides no evidence about the approval boundary or execution prerequisites for a 750-dollar customer refund."
+      },
+      "m31": {
+        "grade": 0,
+        "reason": "Provides no evidence about the approval boundary or execution prerequisites for a 750-dollar customer refund."
+      },
+      "m32": {
+        "grade": 0,
+        "reason": "Provides no evidence about the approval boundary or execution prerequisites for a 750-dollar customer refund."
+      },
+      "m33": {
+        "grade": 0,
+        "reason": "Provides no evidence about the approval boundary or execution prerequisites for a 750-dollar customer refund."
+      },
+      "m34": {
+        "grade": 0,
+        "reason": "Provides no evidence about the approval boundary or execution prerequisites for a 750-dollar customer refund."
+      },
+      "m35": {
+        "grade": 0,
+        "reason": "Provides no evidence about the approval boundary or execution prerequisites for a 750-dollar customer refund."
+      },
+      "m36": {
+        "grade": 0,
+        "reason": "Provides no evidence about the approval boundary or execution prerequisites for a 750-dollar customer refund."
+      },
+      "m37": {
+        "grade": 0,
+        "reason": "Provides no evidence about the approval boundary or execution prerequisites for a 750-dollar customer refund."
+      },
+      "m38": {
+        "grade": 0,
+        "reason": "Provides no evidence about the approval boundary or execution prerequisites for a 750-dollar customer refund."
+      },
+      "m39": {
+        "grade": 0,
+        "reason": "Provides no evidence about the approval boundary or execution prerequisites for a 750-dollar customer refund."
+      },
+      "m40": {
+        "grade": 0,
+        "reason": "Provides no evidence about the approval boundary or execution prerequisites for a 750-dollar customer refund."
+      },
+      "m41": {
+        "grade": 0,
+        "reason": "Provides no evidence about the approval boundary or execution prerequisites for a 750-dollar customer refund."
+      },
+      "m42": {
+        "grade": 0,
+        "reason": "Provides no evidence about the approval boundary or execution prerequisites for a 750-dollar customer refund."
+      },
+      "m43": {
+        "grade": 0,
+        "reason": "Provides no evidence about the approval boundary or execution prerequisites for a 750-dollar customer refund."
+      },
+      "m44": {
+        "grade": 0,
+        "reason": "Provides no evidence about the approval boundary or execution prerequisites for a 750-dollar customer refund."
+      },
+      "m45": {
+        "grade": 0,
+        "reason": "Provides no evidence about the approval boundary or execution prerequisites for a 750-dollar customer refund."
+      },
+      "m46": {
+        "grade": 0,
+        "reason": "Provides no evidence about the approval boundary or execution prerequisites for a 750-dollar customer refund."
+      },
+      "m47": {
+        "grade": 0,
+        "reason": "Provides no evidence about the approval boundary or execution prerequisites for a 750-dollar customer refund."
+      },
+      "m48": {
+        "grade": 0,
+        "reason": "Provides no evidence about the approval boundary or execution prerequisites for a 750-dollar customer refund."
+      },
+      "m49": {
+        "grade": 0,
+        "reason": "Provides no evidence about the approval boundary or execution prerequisites for a 750-dollar customer refund."
+      },
+      "m50": {
+        "grade": 0,
+        "reason": "Provides no evidence about the approval boundary or execution prerequisites for a 750-dollar customer refund."
+      },
+      "m51": {
+        "grade": 0,
+        "reason": "Provides no evidence about the approval boundary or execution prerequisites for a 750-dollar customer refund."
+      },
+      "m52": {
+        "grade": 0,
+        "reason": "Provides no evidence about the approval boundary or execution prerequisites for a 750-dollar customer refund."
+      },
+      "m53": {
+        "grade": 3,
+        "reason": "Directly states that a 750-dollar refund requires finance-manager approval."
+      },
+      "m54": {
+        "grade": 3,
+        "reason": "Requires finance approval above 500 dollars and says purchase verification alone is insufficient."
+      },
+      "m55": {
+        "grade": 0,
+        "reason": "Loyalty points on a 750-dollar purchase do not establish refund authority."
+      },
+      "m56": {
+        "grade": 0,
+        "reason": "Procurement review governs supplier payments, explicitly not customer refunds."
+      },
+      "m57": {
+        "grade": 0,
+        "reason": "Refund-status icon colors do not establish authorization or execution prerequisites."
+      },
+      "m58": {
+        "grade": 0,
+        "reason": "Reporting refund totals does not establish refund authority."
+      },
+      "m59": {
+        "grade": 0,
+        "reason": "Provides no evidence about the approval boundary or execution prerequisites for a 750-dollar customer refund."
+      },
+      "m60": {
+        "grade": 0,
+        "reason": "Provides no evidence about the approval boundary or execution prerequisites for a 750-dollar customer refund."
+      },
+      "m61": {
+        "grade": 0,
+        "reason": "Provides no evidence about the approval boundary or execution prerequisites for a 750-dollar customer refund."
+      },
+      "m62": {
+        "grade": 0,
+        "reason": "Provides no evidence about the approval boundary or execution prerequisites for a 750-dollar customer refund."
+      },
+      "m63": {
+        "grade": 0,
+        "reason": "Provides no evidence about the approval boundary or execution prerequisites for a 750-dollar customer refund."
+      },
+      "m64": {
+        "grade": 0,
+        "reason": "Provides no evidence about the approval boundary or execution prerequisites for a 750-dollar customer refund."
+      },
+      "m65": {
+        "grade": 0,
+        "reason": "Provides no evidence about the approval boundary or execution prerequisites for a 750-dollar customer refund."
+      },
+      "m66": {
+        "grade": 0,
+        "reason": "Provides no evidence about the approval boundary or execution prerequisites for a 750-dollar customer refund."
+      },
+      "m67": {
+        "grade": 0,
+        "reason": "Provides no evidence about the approval boundary or execution prerequisites for a 750-dollar customer refund."
+      },
+      "m68": {
+        "grade": 0,
+        "reason": "Provides no evidence about the approval boundary or execution prerequisites for a 750-dollar customer refund."
+      },
+      "m69": {
+        "grade": 0,
+        "reason": "Provides no evidence about the approval boundary or execution prerequisites for a 750-dollar customer refund."
+      },
+      "m70": {
+        "grade": 0,
+        "reason": "Provides no evidence about the approval boundary or execution prerequisites for a 750-dollar customer refund."
+      },
+      "m71": {
+        "grade": 0,
+        "reason": "Provides no evidence about the approval boundary or execution prerequisites for a 750-dollar customer refund."
+      },
+      "m72": {
+        "grade": 0,
+        "reason": "Provides no evidence about the approval boundary or execution prerequisites for a 750-dollar customer refund."
+      },
+      "m73": {
+        "grade": 0,
+        "reason": "Provides no evidence about the approval boundary or execution prerequisites for a 750-dollar customer refund."
+      },
+      "m74": {
+        "grade": 0,
+        "reason": "Provides no evidence about the approval boundary or execution prerequisites for a 750-dollar customer refund."
+      },
+      "m75": {
+        "grade": 0,
+        "reason": "Provides no evidence about the approval boundary or execution prerequisites for a 750-dollar customer refund."
+      },
+      "m76": {
+        "grade": 0,
+        "reason": "Provides no evidence about the approval boundary or execution prerequisites for a 750-dollar customer refund."
+      },
+      "m77": {
+        "grade": 0,
+        "reason": "Provides no evidence about the approval boundary or execution prerequisites for a 750-dollar customer refund."
+      },
+      "m78": {
+        "grade": 0,
+        "reason": "Provides no evidence about the approval boundary or execution prerequisites for a 750-dollar customer refund."
+      },
+      "m79": {
+        "grade": 0,
+        "reason": "Provides no evidence about the approval boundary or execution prerequisites for a 750-dollar customer refund."
+      },
+      "m80": {
+        "grade": 0,
+        "reason": "Provides no evidence about the approval boundary or execution prerequisites for a 750-dollar customer refund."
+      },
+      "m81": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "m82": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "m83": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "m84": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "m85": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "m86": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "m87": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "m88": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "xq1": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xq2": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xq3": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xq4": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xq5": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xq6": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xq7": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xq8": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      }
+    },
+    "q6": {
+      "m01": {
+        "grade": 0,
+        "reason": "Provides no evidence about the response or retry precautions after an API rate limit."
+      },
+      "m02": {
+        "grade": 0,
+        "reason": "Provides no evidence about the response or retry precautions after an API rate limit."
+      },
+      "m03": {
+        "grade": 0,
+        "reason": "Provides no evidence about the response or retry precautions after an API rate limit."
+      },
+      "m04": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "m05": {
+        "grade": 0,
+        "reason": "Provides no evidence about the response or retry precautions after an API rate limit."
+      },
+      "m06": {
+        "grade": 0,
+        "reason": "Provides no evidence about the response or retry precautions after an API rate limit."
+      },
+      "m07": {
+        "grade": 0,
+        "reason": "Provides no evidence about the response or retry precautions after an API rate limit."
+      },
+      "m08": {
+        "grade": 0,
+        "reason": "Provides no evidence about the response or retry precautions after an API rate limit."
+      },
+      "m09": {
+        "grade": 0,
+        "reason": "Provides no evidence about the response or retry precautions after an API rate limit."
+      },
+      "m10": {
+        "grade": 0,
+        "reason": "Provides no evidence about the response or retry precautions after an API rate limit."
+      },
+      "m11": {
+        "grade": 0,
+        "reason": "Provides no evidence about the response or retry precautions after an API rate limit."
+      },
+      "m12": {
+        "grade": 0,
+        "reason": "Provides no evidence about the response or retry precautions after an API rate limit."
+      },
+      "m13": {
+        "grade": 0,
+        "reason": "Provides no evidence about the response or retry precautions after an API rate limit."
+      },
+      "m14": {
+        "grade": 0,
+        "reason": "Provides no evidence about the response or retry precautions after an API rate limit."
+      },
+      "m15": {
+        "grade": 0,
+        "reason": "Provides no evidence about the response or retry precautions after an API rate limit."
+      },
+      "m16": {
+        "grade": 0,
+        "reason": "Provides no evidence about the response or retry precautions after an API rate limit."
+      },
+      "m17": {
+        "grade": 0,
+        "reason": "Refund-tool parameters are not a general client response to rate limiting."
+      },
+      "m18": {
+        "grade": 3,
+        "reason": "Specifies Retry-After, exponential backoff, and jitter after HTTP 429."
+      },
+      "m19": {
+        "grade": 1,
+        "reason": "Adds a conditional safety prerequisite when the retried request is a payment: use an idempotency key."
+      },
+      "m20": {
+        "grade": 0,
+        "reason": "HTTP 401 requires an authentication remedy, not rate-limit backoff."
+      },
+      "m21": {
+        "grade": 0,
+        "reason": "Provides no evidence about the response or retry precautions after an API rate limit."
+      },
+      "m22": {
+        "grade": 0,
+        "reason": "Provides no evidence about the response or retry precautions after an API rate limit."
+      },
+      "m23": {
+        "grade": 0,
+        "reason": "Provides no evidence about the response or retry precautions after an API rate limit."
+      },
+      "m24": {
+        "grade": 0,
+        "reason": "Provides no evidence about the response or retry precautions after an API rate limit."
+      },
+      "m25": {
+        "grade": 0,
+        "reason": "Provides no evidence about the response or retry precautions after an API rate limit."
+      },
+      "m26": {
+        "grade": 0,
+        "reason": "Provides no evidence about the response or retry precautions after an API rate limit."
+      },
+      "m27": {
+        "grade": 0,
+        "reason": "Provides no evidence about the response or retry precautions after an API rate limit."
+      },
+      "m28": {
+        "grade": 0,
+        "reason": "Provides no evidence about the response or retry precautions after an API rate limit."
+      },
+      "xm01": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xm02": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xm03": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xm04": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "m29": {
+        "grade": 0,
+        "reason": "Provides no evidence about the response or retry precautions after an API rate limit."
+      },
+      "m30": {
+        "grade": 0,
+        "reason": "Provides no evidence about the response or retry precautions after an API rate limit."
+      },
+      "m31": {
+        "grade": 0,
+        "reason": "Provides no evidence about the response or retry precautions after an API rate limit."
+      },
+      "m32": {
+        "grade": 0,
+        "reason": "Provides no evidence about the response or retry precautions after an API rate limit."
+      },
+      "m33": {
+        "grade": 0,
+        "reason": "Provides no evidence about the response or retry precautions after an API rate limit."
+      },
+      "m34": {
+        "grade": 0,
+        "reason": "Provides no evidence about the response or retry precautions after an API rate limit."
+      },
+      "m35": {
+        "grade": 0,
+        "reason": "Provides no evidence about the response or retry precautions after an API rate limit."
+      },
+      "m36": {
+        "grade": 0,
+        "reason": "Provides no evidence about the response or retry precautions after an API rate limit."
+      },
+      "m37": {
+        "grade": 0,
+        "reason": "Provides no evidence about the response or retry precautions after an API rate limit."
+      },
+      "m38": {
+        "grade": 0,
+        "reason": "Provides no evidence about the response or retry precautions after an API rate limit."
+      },
+      "m39": {
+        "grade": 0,
+        "reason": "Provides no evidence about the response or retry precautions after an API rate limit."
+      },
+      "m40": {
+        "grade": 0,
+        "reason": "Provides no evidence about the response or retry precautions after an API rate limit."
+      },
+      "m41": {
+        "grade": 0,
+        "reason": "Provides no evidence about the response or retry precautions after an API rate limit."
+      },
+      "m42": {
+        "grade": 0,
+        "reason": "Provides no evidence about the response or retry precautions after an API rate limit."
+      },
+      "m43": {
+        "grade": 0,
+        "reason": "Provides no evidence about the response or retry precautions after an API rate limit."
+      },
+      "m44": {
+        "grade": 0,
+        "reason": "Provides no evidence about the response or retry precautions after an API rate limit."
+      },
+      "m45": {
+        "grade": 0,
+        "reason": "Provides no evidence about the response or retry precautions after an API rate limit."
+      },
+      "m46": {
+        "grade": 0,
+        "reason": "Provides no evidence about the response or retry precautions after an API rate limit."
+      },
+      "m47": {
+        "grade": 0,
+        "reason": "Provides no evidence about the response or retry precautions after an API rate limit."
+      },
+      "m48": {
+        "grade": 0,
+        "reason": "Provides no evidence about the response or retry precautions after an API rate limit."
+      },
+      "m49": {
+        "grade": 0,
+        "reason": "Provides no evidence about the response or retry precautions after an API rate limit."
+      },
+      "m50": {
+        "grade": 0,
+        "reason": "Provides no evidence about the response or retry precautions after an API rate limit."
+      },
+      "m51": {
+        "grade": 0,
+        "reason": "Provides no evidence about the response or retry precautions after an API rate limit."
+      },
+      "m52": {
+        "grade": 0,
+        "reason": "Provides no evidence about the response or retry precautions after an API rate limit."
+      },
+      "m53": {
+        "grade": 0,
+        "reason": "Provides no evidence about the response or retry precautions after an API rate limit."
+      },
+      "m54": {
+        "grade": 0,
+        "reason": "Provides no evidence about the response or retry precautions after an API rate limit."
+      },
+      "m55": {
+        "grade": 0,
+        "reason": "Provides no evidence about the response or retry precautions after an API rate limit."
+      },
+      "m56": {
+        "grade": 0,
+        "reason": "Provides no evidence about the response or retry precautions after an API rate limit."
+      },
+      "m57": {
+        "grade": 0,
+        "reason": "Provides no evidence about the response or retry precautions after an API rate limit."
+      },
+      "m58": {
+        "grade": 0,
+        "reason": "Provides no evidence about the response or retry precautions after an API rate limit."
+      },
+      "m59": {
+        "grade": 3,
+        "reason": "Specifies waiting for Retry-After and avoiding immediate retries after rate limiting."
+      },
+      "m60": {
+        "grade": 3,
+        "reason": "Specifies capped exponential backoff with jitter when Retry-After is absent."
+      },
+      "m61": {
+        "grade": 0,
+        "reason": "The token-refresh advice applies to HTTP 401, not rate limiting."
+      },
+      "m62": {
+        "grade": 0,
+        "reason": "Historical rate-limit charts provide no client action after a response."
+      },
+      "m63": {
+        "grade": 0,
+        "reason": "Subscription quota descriptions provide no post-response retry action."
+      },
+      "m64": {
+        "grade": 0,
+        "reason": "Bandwidth charts do not describe rate-limit response handling."
+      },
+      "m65": {
+        "grade": 0,
+        "reason": "Provides no evidence about the response or retry precautions after an API rate limit."
+      },
+      "m66": {
+        "grade": 0,
+        "reason": "Provides no evidence about the response or retry precautions after an API rate limit."
+      },
+      "m67": {
+        "grade": 0,
+        "reason": "Provides no evidence about the response or retry precautions after an API rate limit."
+      },
+      "m68": {
+        "grade": 0,
+        "reason": "Provides no evidence about the response or retry precautions after an API rate limit."
+      },
+      "m69": {
+        "grade": 0,
+        "reason": "Provides no evidence about the response or retry precautions after an API rate limit."
+      },
+      "m70": {
+        "grade": 0,
+        "reason": "Provides no evidence about the response or retry precautions after an API rate limit."
+      },
+      "m71": {
+        "grade": 0,
+        "reason": "Provides no evidence about the response or retry precautions after an API rate limit."
+      },
+      "m72": {
+        "grade": 0,
+        "reason": "Provides no evidence about the response or retry precautions after an API rate limit."
+      },
+      "m73": {
+        "grade": 0,
+        "reason": "Provides no evidence about the response or retry precautions after an API rate limit."
+      },
+      "m74": {
+        "grade": 0,
+        "reason": "Provides no evidence about the response or retry precautions after an API rate limit."
+      },
+      "m75": {
+        "grade": 0,
+        "reason": "Provides no evidence about the response or retry precautions after an API rate limit."
+      },
+      "m76": {
+        "grade": 0,
+        "reason": "Provides no evidence about the response or retry precautions after an API rate limit."
+      },
+      "m77": {
+        "grade": 0,
+        "reason": "Provides no evidence about the response or retry precautions after an API rate limit."
+      },
+      "m78": {
+        "grade": 0,
+        "reason": "Provides no evidence about the response or retry precautions after an API rate limit."
+      },
+      "m79": {
+        "grade": 0,
+        "reason": "Provides no evidence about the response or retry precautions after an API rate limit."
+      },
+      "m80": {
+        "grade": 0,
+        "reason": "Provides no evidence about the response or retry precautions after an API rate limit."
+      },
+      "m81": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "m82": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "m83": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "m84": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "m85": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "m86": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "m87": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "m88": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "xq1": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xq2": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xq3": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xq4": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xq5": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xq6": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xq7": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xq8": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      }
+    },
+    "q7": {
+      "m01": {
+        "grade": 0,
+        "reason": "Provides no evidence about live API routing or distinctions between production and other regional endpoints."
+      },
+      "m02": {
+        "grade": 0,
+        "reason": "Provides no evidence about live API routing or distinctions between production and other regional endpoints."
+      },
+      "m03": {
+        "grade": 0,
+        "reason": "Provides no evidence about live API routing or distinctions between production and other regional endpoints."
+      },
+      "m04": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "m05": {
+        "grade": 0,
+        "reason": "Provides no evidence about live API routing or distinctions between production and other regional endpoints."
+      },
+      "m06": {
+        "grade": 0,
+        "reason": "Provides no evidence about live API routing or distinctions between production and other regional endpoints."
+      },
+      "m07": {
+        "grade": 0,
+        "reason": "Provides no evidence about live API routing or distinctions between production and other regional endpoints."
+      },
+      "m08": {
+        "grade": 0,
+        "reason": "Provides no evidence about live API routing or distinctions between production and other regional endpoints."
+      },
+      "m09": {
+        "grade": 0,
+        "reason": "Provides no evidence about live API routing or distinctions between production and other regional endpoints."
+      },
+      "m10": {
+        "grade": 0,
+        "reason": "Provides no evidence about live API routing or distinctions between production and other regional endpoints."
+      },
+      "m11": {
+        "grade": 0,
+        "reason": "Provides no evidence about live API routing or distinctions between production and other regional endpoints."
+      },
+      "m12": {
+        "grade": 0,
+        "reason": "Provides no evidence about live API routing or distinctions between production and other regional endpoints."
+      },
+      "m13": {
+        "grade": 0,
+        "reason": "Provides no evidence about live API routing or distinctions between production and other regional endpoints."
+      },
+      "m14": {
+        "grade": 0,
+        "reason": "Provides no evidence about live API routing or distinctions between production and other regional endpoints."
+      },
+      "m15": {
+        "grade": 0,
+        "reason": "Provides no evidence about live API routing or distinctions between production and other regional endpoints."
+      },
+      "m16": {
+        "grade": 0,
+        "reason": "Provides no evidence about live API routing or distinctions between production and other regional endpoints."
+      },
+      "m17": {
+        "grade": 0,
+        "reason": "Provides no evidence about live API routing or distinctions between production and other regional endpoints."
+      },
+      "m18": {
+        "grade": 0,
+        "reason": "Provides no evidence about live API routing or distinctions between production and other regional endpoints."
+      },
+      "m19": {
+        "grade": 0,
+        "reason": "Provides no evidence about live API routing or distinctions between production and other regional endpoints."
+      },
+      "m20": {
+        "grade": 0,
+        "reason": "Provides no evidence about live API routing or distinctions between production and other regional endpoints."
+      },
+      "m21": {
+        "grade": 3,
+        "reason": "Directly assigns production requests to EU Central and sandbox requests to EU West."
+      },
+      "m22": {
+        "grade": 2,
+        "reason": "Identifies EU Central as the production endpoint and supplies credential-location context."
+      },
+      "m23": {
+        "grade": 0,
+        "reason": "A staging data-use restriction does not identify or exclude any routing region."
+      },
+      "m24": {
+        "grade": 0,
+        "reason": "Provides no evidence about live API routing or distinctions between production and other regional endpoints."
+      },
+      "m25": {
+        "grade": 0,
+        "reason": "Provides no evidence about live API routing or distinctions between production and other regional endpoints."
+      },
+      "m26": {
+        "grade": 0,
+        "reason": "Provides no evidence about live API routing or distinctions between production and other regional endpoints."
+      },
+      "m27": {
+        "grade": 0,
+        "reason": "Provides no evidence about live API routing or distinctions between production and other regional endpoints."
+      },
+      "m28": {
+        "grade": 0,
+        "reason": "Provides no evidence about live API routing or distinctions between production and other regional endpoints."
+      },
+      "xm01": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xm02": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xm03": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xm04": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "m29": {
+        "grade": 0,
+        "reason": "Provides no evidence about live API routing or distinctions between production and other regional endpoints."
+      },
+      "m30": {
+        "grade": 0,
+        "reason": "Provides no evidence about live API routing or distinctions between production and other regional endpoints."
+      },
+      "m31": {
+        "grade": 0,
+        "reason": "Provides no evidence about live API routing or distinctions between production and other regional endpoints."
+      },
+      "m32": {
+        "grade": 0,
+        "reason": "Provides no evidence about live API routing or distinctions between production and other regional endpoints."
+      },
+      "m33": {
+        "grade": 0,
+        "reason": "Provides no evidence about live API routing or distinctions between production and other regional endpoints."
+      },
+      "m34": {
+        "grade": 0,
+        "reason": "Provides no evidence about live API routing or distinctions between production and other regional endpoints."
+      },
+      "m35": {
+        "grade": 0,
+        "reason": "Provides no evidence about live API routing or distinctions between production and other regional endpoints."
+      },
+      "m36": {
+        "grade": 0,
+        "reason": "Provides no evidence about live API routing or distinctions between production and other regional endpoints."
+      },
+      "m37": {
+        "grade": 0,
+        "reason": "Provides no evidence about live API routing or distinctions between production and other regional endpoints."
+      },
+      "m38": {
+        "grade": 0,
+        "reason": "Provides no evidence about live API routing or distinctions between production and other regional endpoints."
+      },
+      "m39": {
+        "grade": 0,
+        "reason": "Provides no evidence about live API routing or distinctions between production and other regional endpoints."
+      },
+      "m40": {
+        "grade": 0,
+        "reason": "Provides no evidence about live API routing or distinctions between production and other regional endpoints."
+      },
+      "m41": {
+        "grade": 0,
+        "reason": "Provides no evidence about live API routing or distinctions between production and other regional endpoints."
+      },
+      "m42": {
+        "grade": 0,
+        "reason": "Provides no evidence about live API routing or distinctions between production and other regional endpoints."
+      },
+      "m43": {
+        "grade": 0,
+        "reason": "Provides no evidence about live API routing or distinctions between production and other regional endpoints."
+      },
+      "m44": {
+        "grade": 0,
+        "reason": "Provides no evidence about live API routing or distinctions between production and other regional endpoints."
+      },
+      "m45": {
+        "grade": 0,
+        "reason": "Provides no evidence about live API routing or distinctions between production and other regional endpoints."
+      },
+      "m46": {
+        "grade": 0,
+        "reason": "Provides no evidence about live API routing or distinctions between production and other regional endpoints."
+      },
+      "m47": {
+        "grade": 0,
+        "reason": "Provides no evidence about live API routing or distinctions between production and other regional endpoints."
+      },
+      "m48": {
+        "grade": 0,
+        "reason": "Provides no evidence about live API routing or distinctions between production and other regional endpoints."
+      },
+      "m49": {
+        "grade": 0,
+        "reason": "Provides no evidence about live API routing or distinctions between production and other regional endpoints."
+      },
+      "m50": {
+        "grade": 0,
+        "reason": "Provides no evidence about live API routing or distinctions between production and other regional endpoints."
+      },
+      "m51": {
+        "grade": 0,
+        "reason": "Provides no evidence about live API routing or distinctions between production and other regional endpoints."
+      },
+      "m52": {
+        "grade": 0,
+        "reason": "Provides no evidence about live API routing or distinctions between production and other regional endpoints."
+      },
+      "m53": {
+        "grade": 0,
+        "reason": "Provides no evidence about live API routing or distinctions between production and other regional endpoints."
+      },
+      "m54": {
+        "grade": 0,
+        "reason": "Provides no evidence about live API routing or distinctions between production and other regional endpoints."
+      },
+      "m55": {
+        "grade": 0,
+        "reason": "Provides no evidence about live API routing or distinctions between production and other regional endpoints."
+      },
+      "m56": {
+        "grade": 0,
+        "reason": "Provides no evidence about live API routing or distinctions between production and other regional endpoints."
+      },
+      "m57": {
+        "grade": 0,
+        "reason": "Provides no evidence about live API routing or distinctions between production and other regional endpoints."
+      },
+      "m58": {
+        "grade": 0,
+        "reason": "Provides no evidence about live API routing or distinctions between production and other regional endpoints."
+      },
+      "m59": {
+        "grade": 0,
+        "reason": "Provides no evidence about live API routing or distinctions between production and other regional endpoints."
+      },
+      "m60": {
+        "grade": 0,
+        "reason": "Provides no evidence about live API routing or distinctions between production and other regional endpoints."
+      },
+      "m61": {
+        "grade": 0,
+        "reason": "Provides no evidence about live API routing or distinctions between production and other regional endpoints."
+      },
+      "m62": {
+        "grade": 0,
+        "reason": "Provides no evidence about live API routing or distinctions between production and other regional endpoints."
+      },
+      "m63": {
+        "grade": 0,
+        "reason": "Provides no evidence about live API routing or distinctions between production and other regional endpoints."
+      },
+      "m64": {
+        "grade": 0,
+        "reason": "Provides no evidence about live API routing or distinctions between production and other regional endpoints."
+      },
+      "m65": {
+        "grade": 3,
+        "reason": "Directly assigns live API clients to EU Central and reserves EU West for sandbox use."
+      },
+      "m66": {
+        "grade": 3,
+        "reason": "Directly assigns live customer API traffic to EU Central."
+      },
+      "m67": {
+        "grade": 2,
+        "reason": "Confirms EU West is a synthetic sandbox target, supporting its exclusion for live traffic."
+      },
+      "m68": {
+        "grade": 1,
+        "reason": "Distinguishes APAC static-content delivery from application API routing; it does not identify the production region."
+      },
+      "m69": {
+        "grade": 1,
+        "reason": "Distinguishes the EU West backup location from the live API endpoint; it does not identify the production region."
+      },
+      "m70": {
+        "grade": 2,
+        "reason": "Explicitly excludes EU East as a live production API target."
+      },
+      "m71": {
+        "grade": 0,
+        "reason": "Provides no evidence about live API routing or distinctions between production and other regional endpoints."
+      },
+      "m72": {
+        "grade": 0,
+        "reason": "Provides no evidence about live API routing or distinctions between production and other regional endpoints."
+      },
+      "m73": {
+        "grade": 0,
+        "reason": "Provides no evidence about live API routing or distinctions between production and other regional endpoints."
+      },
+      "m74": {
+        "grade": 0,
+        "reason": "Provides no evidence about live API routing or distinctions between production and other regional endpoints."
+      },
+      "m75": {
+        "grade": 0,
+        "reason": "Provides no evidence about live API routing or distinctions between production and other regional endpoints."
+      },
+      "m76": {
+        "grade": 0,
+        "reason": "Provides no evidence about live API routing or distinctions between production and other regional endpoints."
+      },
+      "m77": {
+        "grade": 0,
+        "reason": "Provides no evidence about live API routing or distinctions between production and other regional endpoints."
+      },
+      "m78": {
+        "grade": 0,
+        "reason": "Provides no evidence about live API routing or distinctions between production and other regional endpoints."
+      },
+      "m79": {
+        "grade": 0,
+        "reason": "Provides no evidence about live API routing or distinctions between production and other regional endpoints."
+      },
+      "m80": {
+        "grade": 0,
+        "reason": "Provides no evidence about live API routing or distinctions between production and other regional endpoints."
+      },
+      "m81": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "m82": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "m83": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "m84": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "m85": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "m86": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "m87": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "m88": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "xq1": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xq2": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xq3": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xq4": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xq5": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xq6": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xq7": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xq8": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      }
+    },
+    "q8": {
+      "m01": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for the Atlas ingestion pause."
+      },
+      "m02": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for the Atlas ingestion pause."
+      },
+      "m03": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for the Atlas ingestion pause."
+      },
+      "m04": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "m05": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for the Atlas ingestion pause."
+      },
+      "m06": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for the Atlas ingestion pause."
+      },
+      "m07": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for the Atlas ingestion pause."
+      },
+      "m08": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for the Atlas ingestion pause."
+      },
+      "m09": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for the Atlas ingestion pause."
+      },
+      "m10": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for the Atlas ingestion pause."
+      },
+      "m11": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for the Atlas ingestion pause."
+      },
+      "m12": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for the Atlas ingestion pause."
+      },
+      "m13": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for the Atlas ingestion pause."
+      },
+      "m14": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for the Atlas ingestion pause."
+      },
+      "m15": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for the Atlas ingestion pause."
+      },
+      "m16": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for the Atlas ingestion pause."
+      },
+      "m17": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for the Atlas ingestion pause."
+      },
+      "m18": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for the Atlas ingestion pause."
+      },
+      "m19": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for the Atlas ingestion pause."
+      },
+      "m20": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for the Atlas ingestion pause."
+      },
+      "m21": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for the Atlas ingestion pause."
+      },
+      "m22": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for the Atlas ingestion pause."
+      },
+      "m23": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for the Atlas ingestion pause."
+      },
+      "m24": {
+        "grade": 3,
+        "reason": "Gives the expired TLS certificate cause and the renewal/restart recovery steps."
+      },
+      "m25": {
+        "grade": 2,
+        "reason": "Distinguishes healthy query workers and connects backlog recovery to certificate renewal."
+      },
+      "m26": {
+        "grade": 0,
+        "reason": "Beacon is a different service with a different failure."
+      },
+      "m27": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for the Atlas ingestion pause."
+      },
+      "m28": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for the Atlas ingestion pause."
+      },
+      "xm01": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xm02": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xm03": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xm04": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "m29": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for the Atlas ingestion pause."
+      },
+      "m30": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for the Atlas ingestion pause."
+      },
+      "m31": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for the Atlas ingestion pause."
+      },
+      "m32": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for the Atlas ingestion pause."
+      },
+      "m33": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for the Atlas ingestion pause."
+      },
+      "m34": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for the Atlas ingestion pause."
+      },
+      "m35": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for the Atlas ingestion pause."
+      },
+      "m36": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for the Atlas ingestion pause."
+      },
+      "m37": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for the Atlas ingestion pause."
+      },
+      "m38": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for the Atlas ingestion pause."
+      },
+      "m39": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for the Atlas ingestion pause."
+      },
+      "m40": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for the Atlas ingestion pause."
+      },
+      "m41": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for the Atlas ingestion pause."
+      },
+      "m42": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for the Atlas ingestion pause."
+      },
+      "m43": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for the Atlas ingestion pause."
+      },
+      "m44": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for the Atlas ingestion pause."
+      },
+      "m45": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for the Atlas ingestion pause."
+      },
+      "m46": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for the Atlas ingestion pause."
+      },
+      "m47": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for the Atlas ingestion pause."
+      },
+      "m48": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for the Atlas ingestion pause."
+      },
+      "m49": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for the Atlas ingestion pause."
+      },
+      "m50": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for the Atlas ingestion pause."
+      },
+      "m51": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for the Atlas ingestion pause."
+      },
+      "m52": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for the Atlas ingestion pause."
+      },
+      "m53": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for the Atlas ingestion pause."
+      },
+      "m54": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for the Atlas ingestion pause."
+      },
+      "m55": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for the Atlas ingestion pause."
+      },
+      "m56": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for the Atlas ingestion pause."
+      },
+      "m57": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for the Atlas ingestion pause."
+      },
+      "m58": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for the Atlas ingestion pause."
+      },
+      "m59": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for the Atlas ingestion pause."
+      },
+      "m60": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for the Atlas ingestion pause."
+      },
+      "m61": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for the Atlas ingestion pause."
+      },
+      "m62": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for the Atlas ingestion pause."
+      },
+      "m63": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for the Atlas ingestion pause."
+      },
+      "m64": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for the Atlas ingestion pause."
+      },
+      "m65": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for the Atlas ingestion pause."
+      },
+      "m66": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for the Atlas ingestion pause."
+      },
+      "m67": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for the Atlas ingestion pause."
+      },
+      "m68": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for the Atlas ingestion pause."
+      },
+      "m69": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for the Atlas ingestion pause."
+      },
+      "m70": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for the Atlas ingestion pause."
+      },
+      "m71": {
+        "grade": 3,
+        "reason": "Identifies the expired certificate and specifies renewal plus ingestion-worker restart."
+      },
+      "m72": {
+        "grade": 3,
+        "reason": "Identifies the expired certificate cause and describes renewal, restart, and backlog monitoring."
+      },
+      "m73": {
+        "grade": 0,
+        "reason": "Historical volume/storage charts do not diagnose the pause or specify recovery."
+      },
+      "m74": {
+        "grade": 0,
+        "reason": "Beacon's disk cleanup does not fix Atlas's certificate failure."
+      },
+      "m75": {
+        "grade": 0,
+        "reason": "Maple's website certificate is explicitly separate from Atlas worker credentials."
+      },
+      "m76": {
+        "grade": 0,
+        "reason": "Report-download permissions do not diagnose or repair ingestion."
+      },
+      "m77": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for the Atlas ingestion pause."
+      },
+      "m78": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for the Atlas ingestion pause."
+      },
+      "m79": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for the Atlas ingestion pause."
+      },
+      "m80": {
+        "grade": 0,
+        "reason": "Provides no evidence about the cause or recovery procedure for the Atlas ingestion pause."
+      },
+      "m81": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "m82": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "m83": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "m84": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "m85": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "m86": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "m87": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "m88": {
+        "grade": 0,
+        "reason": "Superseded records are ineligible for this current-policy query, regardless of text similarity."
+      },
+      "xq1": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xq2": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xq3": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xq4": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xq5": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xq6": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xq7": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      },
+      "xq8": {
+        "grade": 0,
+        "reason": "Another tenant's record is outside the Acme query scope, regardless of text similarity."
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+FROM pgvector/pgvector:pg18@sha256:2358fcba361ed2233a5ed81b5fe4ca779ccb304120ce531a3bf51c0ed7e2bc11
+RUN apt-get update && apt-get install -y --no-install-recommends build-essential postgresql-server-dev-18 git ca-certificates \
+    && git clone --depth 1 --branch v1.5.0 https://github.com/timescale/pg_textsearch.git /tmp/pg_textsearch \
+    && make -C /tmp/pg_textsearch \
+    && make -C /tmp/pg_textsearch install \
+    && rm -rf /tmp/pg_textsearch /var/lib/apt/lists/*
+CMD ["postgres", "-c", "shared_preload_libraries=pg_textsearch"]

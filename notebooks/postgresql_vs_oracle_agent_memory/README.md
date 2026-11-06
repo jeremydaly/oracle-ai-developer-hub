@@ -2,7 +2,7 @@
 
 [Open the notebook](postgresql_vs_oracle_agent_memory.ipynb) to compare memory writes and retrieval using Oracle AI Database 26ai and PostgreSQL with pgvector and pg_textsearch. It demonstrates local ONNX inference, SQL property graphs, hybrid retrieval, transaction visibility, and database access controls.
 
-All memories are synthetic. The relevance fixture contains 100 memories and eight questions. Both engines receive identical Oracle-generated vectors and BGE reranking scores; PostgreSQL's inference is external in this experiment. The notebook makes no paid model-service calls. Its relevance results apply to this small fixture.
+All memories are synthetic. The relevance fixture contains 100 memories and eight questions. Both engines receive identical Oracle-generated vectors and BGE reranking scores; PostgreSQL's inference is external in this experiment. The notebook makes no paid model-service calls.
 
 ## Files
 
@@ -18,25 +18,25 @@ All memories are synthetic. The relevance fixture contains 100 memories and eigh
 | `Dockerfile.postgres` | Local PostgreSQL image with pgvector and pg_textsearch |
 | `.env.example` | Configuration keys to add to the repository's `.env` |
 | `execute_notebook.py` | Runs all notebook cells and saves their outputs |
-| `results/verification.json` | Recorded reference run used by the article |
+| `results/verification.json` | Recorded reference run for inspecting results without a database |
 
-Keep these files together. The folder runs independently of the article workspace and can be copied with its supporting files.
+Download the whole folder and keep its supporting files together.
 
 ## Prerequisites
 
 Use a Python 3.11+ Jupyter kernel and development instances of Oracle AI Database 26ai and PostgreSQL with pgvector and pg_textsearch. Docker is needed if you use the supplied PostgreSQL image or the optional local DDS example.
 
-The Oracle connection uses the same `DB_USER`, `DB_PASSWORD`, and `DB_DSN` as the other memory notebooks, including [Jev memory](../oracle_jev_memory/oracle_jev_memory.ipynb) and the [hybrid retrieval pipeline](../hybrid_retrieval_pipeline.ipynb). Use a non-SYS schema owner without `EXEMPT ACCESS POLICY`. It needs tablespace quota; `CREATE SESSION`, `CREATE TABLE`, `CREATE PROCEDURE`, and `CREATE PROPERTY GRAPH`; Oracle Text access through `CTXAPP`; and `EXECUTE ON DBMS_RLS`. Loading a missing model also requires `CREATE MINING MODEL` and execute access to `DBMS_VECTOR`. Wallet-based connections aren't configured by this example.
+Use a non-SYS schema owner without `EXEMPT ACCESS POLICY`. It needs tablespace quota; `CREATE SESSION`, `CREATE TABLE`, `CREATE PROCEDURE`, and `CREATE PROPERTY GRAPH`; Oracle Text access through `CTXAPP`; and `EXECUTE ON DBMS_RLS`. Loading a missing model also requires `CREATE MINING MODEL` and execute access to `DBMS_VECTOR`. Wallet-based connections aren't configured by this example.
 
-The PostgreSQL account needs extension and role-administration privileges for setup. The RLS checks switch to a separate non-owner role without superuser or bypass privileges. The recorded run uses Oracle Free 23.26.3.0.0, PostgreSQL 18.6, pgvector 0.8.7, and pg_textsearch 1.5.0.
+The PostgreSQL account needs extension and role-administration privileges for setup. The recorded run uses Oracle Free 23.26.3.0.0, PostgreSQL 18.6, pgvector 0.8.7, and pg_textsearch 1.5.0.
 
 ## Database setup
 
-The notebook uses the stable Oracle memory table `PG_ORACLE_MEMORY` and PostgreSQL table `postgres_oracle.memory`. Supporting Oracle objects use fixed `PG_ORACLE_*` names; PostgreSQL uses the `postgres_oracle` schema and `postgres_oracle_reader` role. Setup recreates these notebook objects, clearing leftovers from an interrupted run. A session lock allows one active notebook run per PostgreSQL database; cleanup or shutting down its kernel releases the lock. Existing models and other notebooks' tables are preserved. Exact vector scans do not require an Oracle vector memory pool.
+The notebook uses the stable Oracle memory table `PG_ORACLE_MEMORY` and PostgreSQL table `postgres_oracle.memory`. Supporting Oracle objects use fixed `PG_ORACLE_*` names; PostgreSQL uses the `postgres_oracle` schema and `postgres_oracle_reader` role. Setup recreates these notebook objects, clearing leftovers from an interrupted run. A session lock allows one active notebook run per PostgreSQL database; cleanup or shutting down its kernel releases the lock. Existing models and unrelated tables are preserved.
 
-If `ALL_MINILM_L12_V2` is missing, the notebook downloads Oracle's augmented MiniLM ONNX model, about 130 MB, and loads it using `DBMS_VECTOR.LOAD_ONNX_MODEL` with a BLOB. No directory object is needed. The notebook machine needs outbound HTTPS to Oracle Object Storage for this download. Set `EMBEDDING_ONNX_FILE` to use an existing local artifact instead. An already-loaded model is reused and checked for 384-dimensional output.
+If `ALL_MINILM_L12_V2` is missing, the notebook downloads and loads Oracle's augmented MiniLM ONNX model, about 130 MB. This requires outbound HTTPS to Oracle Object Storage. Set `EMBEDDING_ONNX_FILE` to use a local artifact instead. An existing model is reused and checked for 384-dimensional output.
 
-The BGE reranker must already be loaded as `BGE_RERANKER`, or you must set `RERANKER_ONNX_FILE` to an augmented ONNX export of `BAAI/bge-reranker-base`. Follow the conversion and local validation sections of the [reranker preparation notebook](../vecdb/reranking/load-model-for-in-database-reranking.ipynb); its VecDB REST and cloud upload steps aren't needed here. The loader preserves the model's `FIRST_INPUT` and `SECOND_INPUT` attributes and uses `function=regression`, `regressionOutput=output`. Raw Hugging Face weights are not the required augmented artifact. Existing models are never replaced or removed.
+The BGE reranker must already be loaded as `BGE_RERANKER`, or you must set `RERANKER_ONNX_FILE` to an augmented ONNX export of `BAAI/bge-reranker-base`. Follow the conversion and local validation sections of the [reranker preparation notebook](../vecdb/reranking/load-model-for-in-database-reranking.ipynb); its VecDB REST and cloud upload steps aren't needed here. Raw Hugging Face weights are not the required augmented artifact.
 
 ### Start the databases
 
@@ -67,13 +67,13 @@ docker run -d --name pg-oracle-postgres \
   pg-oracle-postgres:pg18-bm25
 ```
 
-Use that password in `PG_DSN` below. The image includes both PostgreSQL extensions and configures pg_textsearch in `shared_preload_libraries`. The notebook enables the extensions if needed. This folder assumes an existing Oracle development database, as the other memory notebooks do.
+Use that password in `PG_DSN` below. The image includes both PostgreSQL extensions and configures pg_textsearch in `shared_preload_libraries`. The notebook enables the extensions if needed. An Oracle development database must already be available.
 
 ## Python setup
 
-Download the entire folder. The notebook's first code cell installs pinned `oracledb`, `python-dotenv`, and `psycopg` packages into the running kernel, so no separate dependency install is needed for interactive use.
+The notebook's first code cell installs pinned `oracledb`, `python-dotenv`, and `psycopg` packages into the running kernel, so no separate dependency install is needed for interactive use.
 
-Add these keys to the `.env` at the Developer Hub repository root, the same file used by the other memory notebooks. Keep any existing Oracle connection values:
+Add these keys to the `.env` at the Developer Hub repository root, preserving any existing connection values:
 
 ```dotenv
 DB_USER=
@@ -97,50 +97,48 @@ Open the notebook from the repository root:
 jupyter lab notebooks/postgresql_vs_oracle_agent_memory/postgresql_vs_oracle_agent_memory.ipynb
 ```
 
-Jupyter starts the kernel in the notebook folder, where it can import the supporting Python files. Select any Python 3.11+ kernel and run the cells in order. Restart the kernel before a full rerun, or if pip replaces a package already imported by the kernel. The connection cell sets and displays the Developer Hub program identifier before the experiments run.
+Select a Python 3.11+ kernel and run the cells in order. Restart the kernel before a full rerun, or if pip replaces a package already imported by the kernel.
 
-For command-line execution, install the execution tools in your Python environment, then run from the repository root. The notebook's first cell installs the database dependencies:
+For command-line execution, run from the repository root:
 
 ```bash
 python -m pip install nbclient==0.11.0 nbformat==5.11.1 ipykernel==7.4.0
 python notebooks/postgresql_vs_oracle_agent_memory/execute_notebook.py
 ```
 
-The runner uses that Python interpreter for its kernel and saves the notebook outputs. No environment or checkout from the article workspace is required. `python lab.py` from the notebook folder runs the core experiments; use the notebook runner for all experiments, including DDS when configured.
+The runner uses that Python interpreter for its kernel and saves the notebook outputs.
 
 ## Check the results
 
 Each completed run writes `results/run-<timestamp>.json`, which this folder's `.gitignore` excludes. It records database and extension versions, model metadata, source hashes, per-query rankings, and pass/fail checks. The included `results/verification.json` is a reference run; a normal execution leaves it intact.
 
-The notebook checks transaction visibility, graph traversal, local embedding and reranking, Oracle Text freshness, and row-policy enforcement. The optional DDS section adds ten checks. The notebook evaluates candidate depths of eight and ten, with per-query diagnostics for inspecting reranking changes.
-
-Both retrieval pipelines use exact cosine search and SQL RRF with constant 60. BGE runs through `DBMS_VECTOR_CHAIN.UTL_TO_RERANK` with `provider=database`; the same scores are applied to both candidate pools. The 100-memory fixture contains 79 active Acme memories, nine superseded Acme memories, and 12 memories from another tenant. Every question is judged against every memory in [qrels.json](qrels.json), including explicit zero grades. A grade of 3 directly answers the question, 2 provides substantive support, 1 provides a useful qualification or execution prerequisite, and 0 is irrelevant or ineligible. Each pair has a rationale. The labels are editorial judgments fixed for the run; there is no held-out set or independent human assessment. Model output can change with the artifact or database version. The experiment does not compare latency, throughput, approximate-index recall, or managed-service performance.
+Both retrieval pipelines use exact cosine search and SQL RRF with constant 60. BGE runs through `DBMS_VECTOR_CHAIN.UTL_TO_RERANK` with `provider=database`. Retrieval admits 79 active Acme memories, excluding nine superseded memories and 12 from another tenant. [qrels.json](qrels.json) contains a grade and rationale for all 800 question-memory pairs. These are editorial judgments, without independent human assessment or a separate set of questions reserved for final evaluation. The experiment does not measure latency, throughput, approximate-index recall, or managed-service performance. Oracle graph queries use SQL property graphs; PostgreSQL uses relational edges without Apache AGE. The VPD/RLS checks enforce a fixed Acme predicate, while the optional DDS example tests end-user access.
 
 ## Read the evaluation
 
-The saved notebook includes expandable, syntax-highlighted Python implementations and formatted SQL probes. Score tables use descriptive method names. The ranking views show one selected question with grades, memory text, and missing relevant records; the reranking view adds before/after positions. Change the selector variables to inspect another question or engine. The judgment and ranking inspection cells can run independently after a kernel restart. They import their own helpers; ranking views use current-kernel results when available and otherwise load the included `results/verification.json`, with the source and timestamp displayed. They require no database connection. A corpus/qrels hash check prevents combining saved rankings with different labels.
+Use the ranking selectors to inspect a question, engine, and retrieval method. Tables show relevance grades, missing memories, and changes in position after reranking. Expand the source blocks to inspect the implementation.
+
+The judgment and ranking inspection cells work independently after a kernel restart. They use current-kernel results when available or load `results/verification.json` without a database connection. Each view labels its source and timestamp; hash checks prevent combining saved rankings with different memories or judgments.
 
 Relevance grades use a task-specific 0-3 rubric: direct answer (3), substantive support (2), useful qualification or prerequisite (1), and irrelevant or ineligible (0). Four-level grading is common in [TREC evaluations](https://trec.nist.gov/data/deep2021.html), but the label meanings and binary-relevance thresholds vary by task.
 
 The notebook calculates nDCG with exponential gain `2**grade - 1` (gains 0, 1, 3, 7) and discount `1 / log2(rank + 1)`, with ranks starting at 1. It normalizes against the ideal top-k ordering of all judged memories. This is an [established nDCG variant](https://docs.pytorch.org/ignite/master/generated/ignite.metrics.rec_sys.NDCG.html); [scikit-learn](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.ndcg_score.html) uses supplied relevance values directly, so raw grades there produce linear-gain scores.
 
-Recall counts every grade >= 1 equally. Each metric is computed per question and averaged equally across the eight questions. nDCG@5 assesses ordering in the first five results; Recall@8 assesses coverage in the first eight. The article uses the ten-candidate evaluation and nDCG@10. The result JSON records the gain function, discount, recall threshold, and aggregation rule.
+Recall counts every grade >= 1 equally. Each metric is computed per question and averaged equally across the eight questions. nDCG@5 assesses ordering in the first five results; Recall@8 assesses coverage in the first eight. The ten-candidate evaluation also reports nDCG@10 and Recall@10.
 
 ## Optional Deep Data Security example
 
 Uncomment `PG_ORACLE_DDS_CONTAINER` and `PG_ORACLE_DDS_PDB` in `.env` to run the native DDS example on a local Oracle Free development container you administer. With these settings absent, the cell records `not_run` and the other experiments still run.
 
-Setup uses SQL*Plus OS authentication through `docker exec` to create temporary end users, data roles, and data grants. It does not add privileges to the existing notebook account. Generated end-user passwords remain in memory. Access checks then connect as those end users through python-oracledb.
+Setup uses SQL*Plus OS authentication through `docker exec` to create temporary end users, data roles, and data grants. Access checks connect as those end users; generated passwords remain in memory.
 
-Support and finance issue the same SELECT without a tenant predicate. Both see only Acme rows, while support sees one restricted payment amount masked as NULL and finance sees both values. The test also verifies that `OR 1=1` cannot expand the visible rows and that an incorrect password is rejected. A `finally` block removes its temporary objects. For another development deployment, call `run_dds(lab, admin_execute)` with a DBA executor for the same PDB.
+Support and finance issue the same SELECT without a tenant predicate. Both see only Acme rows, while support sees one restricted payment amount masked as NULL and finance sees both values. The test also verifies that `OR 1=1` cannot expand the visible rows and that an incorrect password is rejected. Temporary DDS objects are removed even if a check fails.
 
 This example tests local DDS authentication and row/cell grants on Free 23.26.3.0.0. It does not validate external IAM tokens, pooled identity propagation, or agent delegation. The fixed-predicate VPD/RLS tests are separate from DDS.
 
-## Scope and lifecycle
+## Cleanup
 
-This is a schema-owner demonstration. The VPD/RLS tests enforce a fixed Acme predicate; a production application needs a trusted identity path and policies on all protected objects. SQL property graphs are exercised on Oracle; PostgreSQL relationships use ordinary tables, without Apache AGE.
-
-The final notebook cell removes the notebook's fixed tables, graph, policy function, PostgreSQL schema, and reader role, then closes both connections. Run it after an earlier cell fails while the kernel is available. After a lost kernel, the next setup resets these same fixed objects. The DDS example resets its own fixed grants, end users, roles, and table before it runs. Existing models remain loaded. Deleting local result files does not remove database objects.
+The final cell removes the notebook's tables and supporting objects, then closes both connections. Run it after an earlier cell fails while the kernel is available. After a lost kernel, the next setup resets the same fixed objects. Existing models remain loaded. Deleting result files does not remove database objects.
 
 After finishing with local containers, stop them without deleting their data:
 
@@ -150,8 +148,5 @@ docker stop oracle-free pg-oracle-postgres
 
 ## References
 
-- [Jev memory walkthrough](../oracle_jev_memory/README.md)
-- [Hybrid retrieval for agent memory](https://blogs.oracle.com/developers/hybrid-retrieval-for-agent-memory-vector-lexical-and-metadata-together)
-- [Oracle reranker preparation](../vecdb/reranking/load-model-for-in-database-reranking.ipynb)
 - [UTL_TO_RERANK](https://docs.oracle.com/en/database/oracle/oracle-database/26/vecse/utl_to_rerank-dbms_vector_chain.html)
 - [DDS local authentication setup](https://docs.oracle.com/en/database/oracle/oracle-database/26/ddscg/configure-database-local-end-user-authentication.html)
